@@ -6,6 +6,7 @@ namespace Syncfusion.LinearGaugeDemos.WinUI.Views
 {
     using System;
     using Microsoft.UI.Xaml.Controls;
+    using Syncfusion.UI.Xaml.Editors;
 
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -17,7 +18,7 @@ namespace Syncfusion.LinearGaugeDemos.WinUI.Views
             this.InitializeComponent();
         }
 
-        private void TickPositionComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TickPositionComboBox_SelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (this.TickPositionComboBox.SelectedIndex == 2)
             {

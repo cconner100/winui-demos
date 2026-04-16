@@ -7,6 +7,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Syncfusion.ChartDemos.WinUI"
     xmlns:chart="using:Syncfusion.UI.Xaml.Charts"
+    xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
     xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI"
     xmlns:common="using:Syncfusion.DemosCommon.WinUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -65,15 +66,24 @@
                         SubstitutionValue="{x:Bind chart.StartAngle, Mode=OneWay}" />
                 </common:DemoLayout.Substitutions>
                 <common:DemoLayout.Options>
-                    <Grid>
+                    <Grid MinWidth="240"
+                          RowSpacing="12">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
-                        <ComboBox  x:Name="drawTypeCombo" Grid.Row="0" Margin="5" Width="150"  Header="GridLineType"
-                                   ItemsSource="{enumextension:EnumToStringValuesExtension Type=chart:PolarChartGridLineType}" SelectedIndex="0" />
-                        <ComboBox x:Name="angleModeCombo" Grid.Row="1" Margin="5" Width="150" Header="StartAngle"
-                               ItemsSource="{enumextension:EnumToStringValuesExtension Type=chart:ChartPolarAngle}" SelectedIndex="3" />
+                        <editors:SfComboBox  x:Name="drawTypeCombo" Grid.Row="0" MinWidth="220" MinHeight="40" HorizontalAlignment="Stretch" Header="GridLineType"
+                                             SelectedIndex="0">
+                            <x:String>Circle</x:String>
+                            <x:String>Polygon</x:String>
+                        </editors:SfComboBox>
+                        <editors:SfComboBox x:Name="angleModeCombo" Grid.Row="1" MinWidth="220" MinHeight="40" HorizontalAlignment="Stretch" Header="StartAngle"
+                                            SelectedIndex="3">
+                            <x:String>Rotate0</x:String>
+                            <x:String>Rotate90</x:String>
+                            <x:String>Rotate180</x:String>
+                            <x:String>Rotate270</x:String>
+                        </editors:SfComboBox>
                     </Grid>
                 </common:DemoLayout.Options>
                 <common:DemoLayout.Xaml>

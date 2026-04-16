@@ -10,6 +10,7 @@ using System.Collections;
 using Microsoft.UI.Xaml;
 using Syncfusion.UI.Xaml.Core;
 using System.Threading.Tasks;
+using TreeViewNode = Syncfusion.UI.Xaml.TreeView.TreeViewNode;
 
 
 namespace Syncfusion.TreeViewDemos.WinUI

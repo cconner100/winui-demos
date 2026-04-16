@@ -7,6 +7,7 @@ namespace Syncfusion.RadialGaugeDemos.WinUI.Views
     using System;
     using System.Collections.Generic;
     using Microsoft.UI.Xaml.Controls;
+    using Syncfusion.UI.Xaml.Editors;
     using Microsoft.UI.Xaml.Media.Animation;
 
     /// <summary>
@@ -19,7 +20,7 @@ namespace Syncfusion.RadialGaugeDemos.WinUI.Views
             this.InitializeComponent();
         }
 
-        private void AnimationTypesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void AnimationTypesComboBox_SelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             this.needlePointer.AnimationEasingFunction = AnimationTypesComboBox.SelectedValue as EasingFunctionBase;
         }

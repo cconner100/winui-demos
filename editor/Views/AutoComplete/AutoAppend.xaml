@@ -31,14 +31,17 @@
                     </editors:SfAutoComplete>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <ComboBox x:Name="appendType"
-                              Width="200"
-                              Margin="10"
-                              Header="AppendType"
-                              SelectionChanged="appendTypeSelectionChanged">
-                        <ComboBoxItem>TextWithSelection</ComboBoxItem>
-                        <ComboBoxItem IsSelected="True">Text</ComboBoxItem>
-                    </ComboBox>
+                    <editors:SfComboBox x:Name="appendType"
+                                        MinWidth="220"
+                                        MinHeight="40"
+                                        Margin="10"
+                                        Header="AppendType"
+                                        HorizontalAlignment="Stretch"
+                                        SelectedIndex="1"
+                                        SelectionChanged="appendTypeSelectionChanged">
+                        <x:String>TextWithSelection</x:String>
+                        <x:String>Text</x:String>
+                    </editors:SfComboBox>
                 </common:DemoLayout.Options>
             </common:DemoLayout>
             

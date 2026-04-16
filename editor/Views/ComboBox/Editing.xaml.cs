@@ -52,7 +52,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.ComboBox
             };
 
 
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
 

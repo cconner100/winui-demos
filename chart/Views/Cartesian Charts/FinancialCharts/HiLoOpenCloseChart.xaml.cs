@@ -75,8 +75,8 @@ namespace Syncfusion.ChartDemos.WinUI.Views
         /// <inheritdoc/>
         public void Dispose()
         {
-            Chart.Dispose();
-            MainGrid.Children.Clear();
+            Chart?.Dispose();
+            MainGrid?.Children.Clear();
         }
     }
 }

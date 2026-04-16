@@ -25,7 +25,7 @@ namespace Syncfusion.DemosCommon.WinUI
     /// Represents a substitution object used for dynamically replacing placeholder values in code snippets.
     /// It allows enabling/disabling substitutions and notifies when the substituted value changes.
     /// </summary>
-    public sealed class DemoLayoutSubstitution : DependencyObject
+    public sealed partial class DemoLayoutSubstitution : DependencyObject
     {
         private object _value;
         private bool _enabled = true;
@@ -175,7 +175,7 @@ namespace Syncfusion.DemosCommon.WinUI
         /// <summary>
         /// Identifies the CSharp dependency property. Stores the C# code snippet as a string.
         /// </summary>
-        public static readonly DependencyProperty CSharpProperty = DependencyProperty.Register(nameof(Xaml), typeof(string), typeof(DemoLayout), new PropertyMetadata(null));
+        public static readonly DependencyProperty CSharpProperty = DependencyProperty.Register(nameof(CSharp), typeof(string), typeof(DemoLayout), new PropertyMetadata(null));
         /// <summary>
         /// Gets or sets the C# code snippet content as a string.
         /// </summary>

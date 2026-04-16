@@ -141,7 +141,7 @@ namespace Syncfusion.DateTimeDemos.WinUI.Views.DatePicker
                 cd.Content = "Notification sent to registered email address regarding payment and flight details.";
             }
 
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
 

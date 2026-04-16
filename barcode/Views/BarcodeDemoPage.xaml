@@ -5,6 +5,7 @@
     xmlns:common="using:Syncfusion.DemosCommon.WinUI"
      xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
     xmlns:local="using:Syncfusion.BarcodeDemos.WinUI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:syncfusion="using:Syncfusion.UI.Xaml.Barcode"
@@ -33,7 +34,7 @@
                     </Grid>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <StackPanel>
+                    <StackPanel MinWidth="240">
                         <CheckBox
                             x:Name="showValue"
                             Width="185"
@@ -50,27 +51,30 @@
                             Maximum="80"
                             Minimum="0"
                             Value="{Binding ElementName=barcode, Path=TextSpacing, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="horizontalTextAlignment"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="HorizontalTextAlignment"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=TextAlignment}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=TextAlignment}, ElementName=barcode, Path=HorizontalTextAlignment, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="verticalTextAlignment"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="VerticalTextAlignment"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=VerticalAlignment}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=VerticalAlignment}, ElementName=barcode, Path=VerticalTextAlignment, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="rotationAngle"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="RotationAngle"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:BarcodeRotation}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:BarcodeRotation}, ElementName=barcode, Path=RotationAngle, Mode=TwoWay}" />
@@ -138,7 +142,7 @@
                     </Grid>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <StackPanel>
+                    <StackPanel MinWidth="240">
                         <Slider
                             x:Name="textSpacingUnidimensional"
                             Width="185"
@@ -157,21 +161,23 @@
                             Maximum="4"
                             Minimum="0"
                             Value="{Binding ElementName=uniDimesionalBarcode, Path=Module, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="symbology"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             DisplayMemberPath="SymobologyItem"
                             Header="Symbology"
                             ItemsSource="{Binding Symbology}"
                             SelectedIndex="0"
                             SelectedItem="{Binding SelectedItem, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="rotationUnidimensional"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="RotationAngle"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:BarcodeRotation}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:BarcodeRotation}, ElementName=uniDimesionalBarcode, Path=RotationAngle, Mode=TwoWay}" />
@@ -229,7 +235,7 @@
                     </Grid>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <StackPanel>
+                    <StackPanel MinWidth="240">
                         <CheckBox
                             x:Name="autoModule"
                             Width="185"
@@ -237,29 +243,32 @@
                             HorizontalAlignment="Center"
                             Content="Auto Module"
                             IsChecked="{Binding ElementName=dataMatrixBarcode, Path=AutoModule, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="encoding"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             DisplayMemberPath="DataMatrixEncoding"
                             Header="Encoding"
                             ItemsSource="{Binding EncodingValues}"
                             SelectedIndex="0"
                             SelectedItem="{Binding EncodingSelectedValue, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="matrixSize"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="MatrixSize"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:DataMatrixSize}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:DataMatrixSize}, ElementName=dataMatrixBarcode, Path=Symbology.MatrixSize, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="dataMatrixRotation"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="RotationAngle"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:BarcodeRotation}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:BarcodeRotation}, ElementName=dataMatrixBarcode, Path=RotationAngle, Mode=TwoWay}" />
@@ -329,7 +338,7 @@
                     </Grid>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <StackPanel>
+                    <StackPanel MinWidth="240">
                         <CheckBox
                             x:Name="autoModuleQRBarcode"
                             Width="185"
@@ -337,27 +346,30 @@
                             HorizontalAlignment="Center"
                             Content="Auto Module"
                             IsChecked="{Binding ElementName=qrBarcode, Path=AutoModule, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="errorCorrectionLevel"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="ErrorCorrectionLevel"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:ErrorCorrectionLevel}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:ErrorCorrectionLevel}, ElementName=qrBarcode, Path=Symbology.ErrorCorrectionLevel, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="qrversion"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="QRVersion"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:QRBarcodeVersion}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:QRBarcodeVersion}, ElementName=qrBarcode, Path=Symbology.QRVersion, Mode=TwoWay}" />
-                        <ComboBox
+                        <editors:SfComboBox
                             x:Name="rotationQRBarcode"
-                            Width="185"
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="16,5,5,5"
-                            HorizontalAlignment="Center"
+                            HorizontalAlignment="Stretch"
                             Header="RotationAngle"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=syncfusion:BarcodeRotation}"
                             SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=syncfusion:BarcodeRotation}, ElementName=qrBarcode, Path=RotationAngle, Mode=TwoWay}" />

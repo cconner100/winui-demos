@@ -42,7 +42,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
                 CloseButtonText = "Close"
             };
 
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
       
@@ -56,7 +56,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
                 CloseButtonText = "Close"
             };
           
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
 

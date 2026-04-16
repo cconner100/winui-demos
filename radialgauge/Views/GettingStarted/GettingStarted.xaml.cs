@@ -5,6 +5,7 @@
 namespace Syncfusion.RadialGaugeDemos.WinUI.Views
 {
     using Microsoft.UI.Xaml.Controls;
+    using Syncfusion.UI.Xaml.Editors;
     using Syncfusion.UI.Xaml.Gauges;
     using System;
 
@@ -19,7 +20,7 @@ namespace Syncfusion.RadialGaugeDemos.WinUI.Views
             this.InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             switch(annotation.DirectionUnit)
             {

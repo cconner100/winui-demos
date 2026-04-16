@@ -75,8 +75,8 @@ namespace Syncfusion.ChartDemos.WinUI.Views
         /// <inheritdoc/>
         public void Dispose()
         {
-            Chart.Dispose();
-            MainGrid.Children.Clear();
+            Chart?.Dispose();
+            MainGrid?.Children.Clear();
         }
 
         private void SolidCandle_CheckBox_Checked(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)

@@ -6,6 +6,7 @@
       mc:Ignorable="d"
       Background="Transparent"
       xmlns:gauge="using:Syncfusion.UI.Xaml.Gauges"
+      xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
       xmlns:common="using:Syncfusion.DemosCommon.WinUI"
       xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI">
 
@@ -27,7 +28,8 @@
             </common:DemoLayout.Example>
 
             <common:DemoLayout.Options>
-                <Grid Width="200">
+                <Grid MinWidth="240"
+                      RowSpacing="8">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -59,14 +61,14 @@
                               Grid.Row="2"
                               IsChecked="{Binding ElementName=axisGaugeAxis, Path=ShowLabels, Mode=TwoWay}" />
 
-                    <ComboBox x:Name="labelPositionComboBox"
-                              Margin="0,5,0,0"
-                              Header="LabelPosition"
-                              Grid.Row="3"
-                              ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeLabelsPosition}"
-                              SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeLabelsPosition}, ElementName=axisGaugeAxis, Path=LabelPosition, Mode=TwoWay}"
-                              HorizontalAlignment="Stretch">
-                    </ComboBox>
+                    <editors:SfComboBox x:Name="labelPositionComboBox"
+                                        Header="LabelPosition"
+                                        Grid.Row="3"
+                                        MinWidth="220"
+                                        MinHeight="40"
+                                        ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeLabelsPosition}"
+                                        SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeLabelsPosition}, ElementName=axisGaugeAxis, Path=LabelPosition, Mode=TwoWay}"
+                                        HorizontalAlignment="Stretch" />
 
                     <CheckBox x:Name="showTicksCheckBox"
                               Margin="0,5,0,0"
@@ -74,14 +76,14 @@
                               Grid.Row="4"
                               IsChecked="{Binding ElementName=axisGaugeAxis, Path=ShowTicks, Mode=TwoWay}" />
 
-                    <ComboBox x:Name="tickPositionComboBox"
-                              Margin="0,5,0,0"
-                              Header="TickPosition"
-                              Grid.Row="5"
-                              ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeElementPosition}"
-                              SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeElementPosition}, ElementName=axisGaugeAxis, Path=TickPosition, Mode=TwoWay}"
-                              HorizontalAlignment="Stretch">
-                    </ComboBox>
+                    <editors:SfComboBox x:Name="tickPositionComboBox"
+                                        Header="TickPosition"
+                                        Grid.Row="5"
+                                        MinWidth="220"
+                                        MinHeight="40"
+                                        ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeElementPosition}"
+                                        SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeElementPosition}, ElementName=axisGaugeAxis, Path=TickPosition, Mode=TwoWay}"
+                                        HorizontalAlignment="Stretch" />
 
                     <CheckBox x:Name="isInversedCheckBox"
                               Margin="0,5,0,0"

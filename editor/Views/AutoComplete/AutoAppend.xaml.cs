@@ -16,7 +16,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
             this.InitializeComponent();
         }
 
-        private void appendTypeSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void appendTypeSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (appendType.SelectedIndex == 0)
             {

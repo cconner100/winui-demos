@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using TreeViewNode = Syncfusion.UI.Xaml.TreeView.TreeViewNode;
 
 namespace Syncfusion.TreeViewDemos.WinUI
 {

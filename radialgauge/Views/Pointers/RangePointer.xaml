@@ -7,6 +7,7 @@
       mc:Ignorable="d"
       Background="Transparent"
       xmlns:gauge="using:Syncfusion.UI.Xaml.Gauges"
+      xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
       xmlns:common="using:Syncfusion.DemosCommon.WinUI"
       xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI">
 
@@ -64,17 +65,19 @@
             </common:DemoLayout.Example>
 
             <common:DemoLayout.Options>
-                <Grid Width="200">
+                <Grid MinWidth="240"
+                      RowSpacing="8">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-                    <ComboBox x:Name="cornerStyleComboBox"
-                              Header="CornerStyle"
-                              ItemsSource="{enumextension:EnumToStringValues Type=gauge:CornerStyle}"
-                              SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:CornerStyle}, ElementName=rangePointer, Path=CornerStyle, Mode=TwoWay}"
-                              HorizontalAlignment="Stretch">
-                    </ComboBox>
+                    <editors:SfComboBox x:Name="cornerStyleComboBox"
+                                        Header="CornerStyle"
+                                        MinWidth="220"
+                                        MinHeight="40"
+                                        ItemsSource="{enumextension:EnumToStringValues Type=gauge:CornerStyle}"
+                                        SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:CornerStyle}, ElementName=rangePointer, Path=CornerStyle, Mode=TwoWay}"
+                                        HorizontalAlignment="Stretch" />
                 </Grid>
             </common:DemoLayout.Options>
 

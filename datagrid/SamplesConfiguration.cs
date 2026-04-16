@@ -412,16 +412,6 @@ namespace Syncfusion.DataGridDemos.WinUI
 
             rowdragdrop.Documentation.AddRange(rowdragdropDocumentations);
 			
-			DemoInfo excelExporting = new DemoInfo()
-            {
-                Name = "Excel Exporting",
-                Category = "Exporting",
-                DemoType = DemoTypes.None,
-                Description = "This sample showcases the excel exporting capability of DataGrid.",
-                DemoView = typeof(DataGrid.ExcelExporting),
-                ShowInfoPanel = false,
-            };
-			
             DemoInfo datavalitations = new DemoInfo()
             {
                 Name = "Data Validation",
@@ -566,7 +556,6 @@ namespace Syncfusion.DataGridDemos.WinUI
                 clipboardoperation, 
                 serialization,
                 customGrouping,
-				excelExporting,
                 styling,
                 conditionalstyling,
                 unboundColumns

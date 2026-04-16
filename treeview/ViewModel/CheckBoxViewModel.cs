@@ -174,7 +174,7 @@ namespace Syncfusion.TreeViewDemos.WinUI
     /// <summary>
     /// Represents the < see cref="NullableTreeCheckbox"/ > class that maintains the checked states.
     /// </summary>
-    public class NullableTreeCheckbox : DependencyObject
+    public partial class NullableTreeCheckbox : DependencyObject
     {
         /// <summary>
         /// Identifies the <see cref="IsEnabled"/> dependency property.

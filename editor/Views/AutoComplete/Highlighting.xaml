@@ -34,67 +34,78 @@
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
                     <StackPanel>
-                        <ComboBox Name="textSearchMode"
-                                  Width="200"
-                                  Margin="10"
-                                  Header="TextSearchMode"
-                                  ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextSearchMode}"
-                                  SelectedItem="{Binding ElementName=autoComplete ,Path=TextSearchMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextSearchMode},Mode=TwoWay}">
-                        </ComboBox>
-                        <ComboBox Name="textHighlightMode"
-                                  Width="200"
-                                  Margin="10"
-                                  Header="TextHighlightMode"
-                                  ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextHighlightMode}"
-                                  SelectedItem="{Binding ElementName=autoComplete,Path=TextHighlightMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextHighlightMode},Mode=TwoWay}"
-                                  SelectionChanged="OnTextHighlightModeSelectionChanged">
-                        </ComboBox>
-                        <ComboBox Name="fontStyle"
-                                  Width="200"
-                                  Margin="10"
-                                  Header="HighlightedTextFontStyle"
-                                  SelectionChanged="OnFontStyleSelectionChanged">
-                            <ComboBoxItem IsSelected="True">Normal</ComboBoxItem>
-                            <ComboBoxItem>Italic</ComboBoxItem>
-                            <ComboBoxItem>Oblique</ComboBoxItem>
-                        </ComboBox>
-                        <ComboBox x:Name="fontWeight"
-                                  Header="HighlightedTextFontWeight"
-                                  Width="200"
-                                  Margin="10"
-                                  SelectionChanged="OnFontWeightSelectionChanged">
-                            <ComboBoxItem IsSelected="True">Bold</ComboBoxItem>
-                            <ComboBoxItem>ExtraBold</ComboBoxItem>
-                            <ComboBoxItem>ExtraLight</ComboBoxItem>
-                            <ComboBoxItem>Light</ComboBoxItem>
-                            <ComboBoxItem>Medium</ComboBoxItem>
-                            <ComboBoxItem>Normal</ComboBoxItem>
-                            <ComboBoxItem>SemiBold</ComboBoxItem>
-                            <ComboBoxItem>SemiLight</ComboBoxItem>
-                            <ComboBoxItem>Thin</ComboBoxItem>
-                            <ComboBoxItem>Black</ComboBoxItem>
-                            <ComboBoxItem>ExtraBlack</ComboBoxItem>
-                        </ComboBox>
-                        <ComboBox x:Name="fontSize"
-                                  Header="HighlightedTextFontSize"
-                                  Width="200"
-                                  Margin="10"
-                                  SelectionChanged="OnFontSizeSelectionChanged">
-                            <ComboBoxItem>8</ComboBoxItem>
-                            <ComboBoxItem>9</ComboBoxItem>
-                            <ComboBoxItem>10</ComboBoxItem>
-                            <ComboBoxItem>11</ComboBoxItem>
-                            <ComboBoxItem>12</ComboBoxItem>
-                            <ComboBoxItem IsSelected="True">14</ComboBoxItem>
-                            <ComboBoxItem>16</ComboBoxItem>
-                            <ComboBoxItem>18</ComboBoxItem>
-                            <ComboBoxItem>20</ComboBoxItem>
-                            <ComboBoxItem>22</ComboBoxItem>
-                            <ComboBoxItem>24</ComboBoxItem>
-                            <ComboBoxItem>26</ComboBoxItem>
-                            <ComboBoxItem>28</ComboBoxItem>
-                            <ComboBoxItem>36</ComboBoxItem>
-                        </ComboBox>
+                        <editors:SfComboBox Name="textSearchMode"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            Margin="10"
+                                            Header="TextSearchMode"
+                                            HorizontalAlignment="Stretch"
+                                            ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextSearchMode}"
+                                            SelectedItem="{Binding ElementName=autoComplete ,Path=TextSearchMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextSearchMode},Mode=TwoWay}" />
+                        <editors:SfComboBox Name="textHighlightMode"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            Margin="10"
+                                            Header="TextHighlightMode"
+                                            HorizontalAlignment="Stretch"
+                                            ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextHighlightMode}"
+                                            SelectedItem="{Binding ElementName=autoComplete,Path=TextHighlightMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextHighlightMode},Mode=TwoWay}"
+                                            SelectionChanged="OnTextHighlightModeSelectionChanged" />
+                        <editors:SfComboBox Name="fontStyle"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            Margin="10"
+                                            Header="HighlightedTextFontStyle"
+                                            HorizontalAlignment="Stretch"
+                                            SelectedIndex="0"
+                                            SelectionChanged="OnFontStyleSelectionChanged">
+                            <x:String>Normal</x:String>
+                            <x:String>Italic</x:String>
+                            <x:String>Oblique</x:String>
+                        </editors:SfComboBox>
+                        <editors:SfComboBox x:Name="fontWeight"
+                                            Header="HighlightedTextFontWeight"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            SelectedIndex="0"
+                                            SelectionChanged="OnFontWeightSelectionChanged">
+                            <x:String>Bold</x:String>
+                            <x:String>ExtraBold</x:String>
+                            <x:String>ExtraLight</x:String>
+                            <x:String>Light</x:String>
+                            <x:String>Medium</x:String>
+                            <x:String>Normal</x:String>
+                            <x:String>SemiBold</x:String>
+                            <x:String>SemiLight</x:String>
+                            <x:String>Thin</x:String>
+                            <x:String>Black</x:String>
+                            <x:String>ExtraBlack</x:String>
+                        </editors:SfComboBox>
+                        <editors:SfComboBox x:Name="fontSize"
+                                            Header="HighlightedTextFontSize"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            Margin="10"
+                                            HorizontalAlignment="Stretch"
+                                            SelectedIndex="5"
+                                            SelectionChanged="OnFontSizeSelectionChanged">
+                            <x:String>8</x:String>
+                            <x:String>9</x:String>
+                            <x:String>10</x:String>
+                            <x:String>11</x:String>
+                            <x:String>12</x:String>
+                            <x:String>14</x:String>
+                            <x:String>16</x:String>
+                            <x:String>18</x:String>
+                            <x:String>20</x:String>
+                            <x:String>22</x:String>
+                            <x:String>24</x:String>
+                            <x:String>26</x:String>
+                            <x:String>28</x:String>
+                            <x:String>36</x:String>
+                        </editors:SfComboBox>
                         <TextBlock Text="HighlightedTextForeground"
                                    Name="foregroundHeader"
                                    Margin="5,0,0,5"

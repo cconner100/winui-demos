@@ -6,6 +6,7 @@
       mc:Ignorable="d"
       Background="Transparent"
       xmlns:common="using:Syncfusion.DemosCommon.WinUI"
+      xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
       xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI"
       xmlns:slider="using:Syncfusion.UI.Xaml.Sliders"
       xmlns:core="using:Syncfusion.UI.Xaml.Core">
@@ -49,7 +50,7 @@
                 </common:DemoLayout.Xaml>
 
                 <common:DemoLayout.Options>
-                    <Grid Width="200">
+                    <Grid MinWidth="240">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -64,14 +65,15 @@
                                  Margin="0,5,0,0"
                                  Text="{Binding ElementName=basicCustomizationRangeSlider, Path=ToolTipFormat, Mode=TwoWay}" />
 
-                        <ComboBox x:Name="toolTipOptionComboBox"
-                                  Grid.Row="2"
-                                  Margin="0,10,0,0"
-                                  Header="ToolTipOption"
-                                  HorizontalAlignment="Stretch"
-                                  ItemsSource="{enumextension:EnumToStringValuesExtension Type=slider:TooltipOption}"
-                                  SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=slider:TooltipOption}, ElementName=basicCustomizationRangeSlider, Path=ToolTipOption, Mode=TwoWay}">
-                        </ComboBox>
+                        <editors:SfComboBox x:Name="toolTipOptionComboBox"
+                                            Grid.Row="2"
+                                            Margin="0,10,0,0"
+                                            Header="ToolTipOption"
+                                            HorizontalAlignment="Stretch"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=slider:TooltipOption}"
+                                            SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=slider:TooltipOption}, ElementName=basicCustomizationRangeSlider, Path=ToolTipOption, Mode=TwoWay}" />
                     </Grid>
                 </common:DemoLayout.Options>
 

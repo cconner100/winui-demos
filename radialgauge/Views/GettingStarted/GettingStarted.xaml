@@ -7,6 +7,7 @@
       mc:Ignorable="d"
       Background="Transparent"
       xmlns:gauge="using:Syncfusion.UI.Xaml.Gauges"
+      xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
       xmlns:common="using:Syncfusion.DemosCommon.WinUI"
       xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI">
     <ScrollViewer>
@@ -28,7 +29,8 @@
                 </common:DemoLayout.Example>
 
                 <common:DemoLayout.Options>
-                    <Grid Width="200">
+                    <Grid MinWidth="240"
+                          RowSpacing="8">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
@@ -77,14 +79,14 @@
                                   Grid.Row="4"
                                   IsChecked="{Binding ElementName=axisGauge, Path=ShowLabels, Mode=TwoWay}" />
 
-                        <ComboBox x:Name="labelPositionComboBox"
-                                  Margin="0,5,0,0"
-                                  Header="LabelPosition"
-                                  Grid.Row="5"
-                                  ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeLabelsPosition}"
-                                  SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeLabelsPosition}, ElementName=axisGauge, Path=LabelPosition, Mode=TwoWay}"
-                                  HorizontalAlignment="Stretch">
-                        </ComboBox>
+                        <editors:SfComboBox x:Name="labelPositionComboBox"
+                                            Header="LabelPosition"
+                                            Grid.Row="5"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeLabelsPosition}"
+                                            SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeLabelsPosition}, ElementName=axisGauge, Path=LabelPosition, Mode=TwoWay}"
+                                            HorizontalAlignment="Stretch" />
 
                         <CheckBox x:Name="showTicksCheckBox"
                                   Margin="0,5,0,0"
@@ -92,14 +94,14 @@
                                   Grid.Row="6"
                                   IsChecked="{Binding ElementName=axisGauge, Path=ShowTicks, Mode=TwoWay}" />
 
-                        <ComboBox x:Name="tickPositionComboBox"
-                                  Margin="0,5,0,0"
-                                  Header="TickPosition"
-                                  Grid.Row="7"
-                                  ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeElementPosition}"
-                                  SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeElementPosition}, ElementName=axisGauge, Path=TickPosition, Mode=TwoWay}"
-                                  HorizontalAlignment="Stretch">
-                        </ComboBox>
+                        <editors:SfComboBox x:Name="tickPositionComboBox"
+                                            Header="TickPosition"
+                                            Grid.Row="7"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:GaugeElementPosition}"
+                                            SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:GaugeElementPosition}, ElementName=axisGauge, Path=TickPosition, Mode=TwoWay}"
+                                            HorizontalAlignment="Stretch" />
 
                         <CheckBox x:Name="isInversedCheckBox"
                                   Margin="0,5,0,0"
@@ -174,7 +176,8 @@
                     </Grid>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <Grid Width="200">
+                    <Grid MinWidth="240"
+                          RowSpacing="8">
                         <Grid.Resources>
                             <Style TargetType="ColorPicker">
                                 <Setter Property="Height"
@@ -373,14 +376,15 @@
                                 Maximum="150"
                                 Value="{Binding ElementName=needlePointer1, Path=Value, Mode=TwoWay}" />
 
-                        <ComboBox x:Name="directionUnitComboBox"
-                                  Header="DirectionUnit"
-                                  Grid.Row="1"
-                                  ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:AnnotationDirection}"
-                                  SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:AnnotationDirection}, ElementName=annotation, Path=DirectionUnit, Mode=TwoWay}"
-                                  SelectionChanged="ComboBox_SelectionChanged"
-                                  HorizontalAlignment="Stretch">                           
-                        </ComboBox>
+                        <editors:SfComboBox x:Name="directionUnitComboBox"
+                                            Header="DirectionUnit"
+                                            Grid.Row="1"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=gauge:AnnotationDirection}"
+                                            SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=gauge:AnnotationDirection}, ElementName=annotation, Path=DirectionUnit, Mode=TwoWay}"
+                                            SelectionChanged="ComboBox_SelectionChanged"
+                                            HorizontalAlignment="Stretch" />
 
                         <Slider x:Name="directionValueSlider"
                                 Padding="0,5,0,0"

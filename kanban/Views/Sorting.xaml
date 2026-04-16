@@ -72,34 +72,36 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"
-                              Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
-                            <Path.Data>
-                                <PathGeometry>
-                                    <PathFigure StartPoint="2,0" 
-                                                IsClosed="True">
-                                        <ArcSegment Point="2,4"                        
-                                                    Size="2,2"                                        
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"                                          
-                                                    SweepDirection="Clockwise"/>
-                                        <ArcSegment Point="2,0"                       
-                                                    Size="2,2"
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"
-                                                    SweepDirection="Clockwise"/>
-                                    </PathFigure>
-                                </PathGeometry>
-                            </Path.Data>
-                        </Path>
-                        <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
-                                   Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
-                    </Grid>
+                    <Border Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"
+                                  Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="2,0" 
+                                                    IsClosed="True">
+                                            <ArcSegment Point="2,4"                        
+                                                        Size="2,2"                                        
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"                                          
+                                                        SweepDirection="Clockwise"/>
+                                            <ArcSegment Point="2,0"                       
+                                                        Size="2,2"
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"
+                                                        SweepDirection="Clockwise"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
+                                       Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right"
                                 Grid.Row="0">
@@ -159,34 +161,36 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"
-                              Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
-                            <Path.Data>
-                                <PathGeometry>
-                                    <PathFigure StartPoint="2,0" 
-                                                IsClosed="True">
-                                        <ArcSegment Point="2,4"                        
-                                                    Size="2,2"                                        
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"                                          
-                                                    SweepDirection="Clockwise"/>
-                                        <ArcSegment Point="2,0"                       
-                                                    Size="2,2"
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"
-                                                    SweepDirection="Clockwise"/>
-                                    </PathFigure>
-                                </PathGeometry>
-                            </Path.Data>
-                        </Path>
-                        <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" VerticalAlignment="Center"
-                                   Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" FontFamily="Roboto-Regular" />
-                    </Grid>
+                    <Border Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"
+                                  Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="2,0" 
+                                                    IsClosed="True">
+                                            <ArcSegment Point="2,4"                        
+                                                        Size="2,2"                                        
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"                                          
+                                                        SweepDirection="Clockwise"/>
+                                            <ArcSegment Point="2,0"                       
+                                                        Size="2,2"
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"
+                                                        SweepDirection="Clockwise"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" VerticalAlignment="Center"
+                                       Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" FontFamily="Roboto-Regular" />
+                        </Grid>
+                    </Border>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0">
                         <TextBlock Text="Rank #" FontSize="12" LineHeight="20"  FontFamily="Roboto-Regular"
@@ -246,34 +250,36 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center"
-                              Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
-                            <Path.Data>
-                                <PathGeometry>
-                                    <PathFigure StartPoint="2,0" 
-                                                IsClosed="True">
-                                        <ArcSegment Point="2,4"                        
-                                                    Size="2,2"                                        
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"                                          
-                                                    SweepDirection="Clockwise"/>
-                                        <ArcSegment Point="2,0"                       
-                                                    Size="2,2"
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"
-                                                    SweepDirection="Clockwise"/>
-                                    </PathFigure>
-                                </PathGeometry>
-                            </Path.Data>
-                        </Path>
-                        <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
-                                   Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter}, ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
-                    </Grid>
+                    <Border Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                  Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="2,0" 
+                                                    IsClosed="True">
+                                            <ArcSegment Point="2,4"                        
+                                                        Size="2,2"                                        
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"                                          
+                                                        SweepDirection="Clockwise"/>
+                                            <ArcSegment Point="2,0"                       
+                                                        Size="2,2"
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"
+                                                        SweepDirection="Clockwise"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
+                                       Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter}, ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0">
                         <TextBlock Text="Rank #" Foreground="{ThemeResource HyperlinkForegroundThemeBrush}"
@@ -332,34 +338,36 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center"
-                              Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
-                            <Path.Data>
-                                <PathGeometry>
-                                    <PathFigure StartPoint="2,0" 
-                                                IsClosed="True">
-                                        <ArcSegment Point="2,4"                        
-                                                    Size="2,2"                                        
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"                                          
-                                                    SweepDirection="Clockwise"/>
-                                        <ArcSegment Point="2,0"                       
-                                                    Size="2,2"
-                                                    RotationAngle="0"
-                                                    IsLargeArc="True"
-                                                    SweepDirection="Clockwise"/>
-                                    </PathFigure>
-                                </PathGeometry>
-                            </Path.Data>
-                        </Path>
-                        <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
-                                   Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
-                    </Grid>
+                    <Border Height="22" Padding="8,4" Margin="0,0,0,6" Grid.Row="0" Grid.Column="0" CornerRadius="10" Background="{ThemeResource ControlOnImageFillColorSecondary}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="8"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path Width="5" Height="5" Grid.Column="0" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                  Fill="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}">
+                                <Path.Data>
+                                    <PathGeometry>
+                                        <PathFigure StartPoint="2,0" 
+                                                    IsClosed="True">
+                                            <ArcSegment Point="2,4"                        
+                                                        Size="2,2"                                        
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"                                          
+                                                        SweepDirection="Clockwise"/>
+                                            <ArcSegment Point="2,0"                       
+                                                        Size="2,2"
+                                                        RotationAngle="0"
+                                                        IsLargeArc="True"
+                                                        SweepDirection="Clockwise"/>
+                                        </PathFigure>
+                                    </PathGeometry>
+                                </Path.Data>
+                            </Path>
+                            <TextBlock Text="{Binding Priority}" Grid.Column="1" FontSize="11" FontFamily="Roboto-Regular"
+                                       Foreground="{Binding Priority, Converter={StaticResource StrokeBrushConverter},ConverterParameter=IndicatorColorKey}" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
 
                     <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="0">
                         <TextBlock Text="Rank #" FontSize="12" LineHeight="20" FontFamily="Roboto-Regular"

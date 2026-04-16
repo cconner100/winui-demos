@@ -322,16 +322,6 @@ namespace Syncfusion.TreeGridDemos.WinUI
 
             conditionalstyling.Documentation.AddRange(conditionalstylingDocumentations);
 
-            DemoInfo excelExporting = new DemoInfo()
-            {
-                Name = "Excel Exporting",
-                Category = "Exporting",
-                DemoType = DemoTypes.None,
-                Description = "This sample showcases the excel exporting capability of TreeGrid.",
-                DemoView = typeof(TreeGrid.ExcelExporting),
-                ShowInfoPanel = false
-            };
-
             var demos = new List<DemoInfo>()
             {
                 selfrelational,
@@ -349,8 +339,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 clipboardoperation, 
  				stackedHeaders,
                 styling,
-                conditionalstyling,
-                excelExporting 
+                conditionalstyling 
             };
 
             var controlInfo = new ControlInfo()

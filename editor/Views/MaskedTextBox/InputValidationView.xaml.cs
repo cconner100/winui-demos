@@ -34,7 +34,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.MaskedTextBox
                     Content = "Please enter all the required data.",
                     CloseButtonText = "Close"
                 };
-                contentDialog.XamlRoot = this.Content.XamlRoot;
+                contentDialog.XamlRoot = this.XamlRoot;
                 await contentDialog.ShowAsync();
             }
             else
@@ -44,7 +44,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.MaskedTextBox
                     Content = string.Format("Amount of {0} has been transferred successfully!", AmountMaskedTextBox.Value),
                     CloseButtonText = "Close"
                 };
-                contentDialog.XamlRoot = this.Content.XamlRoot;
+                contentDialog.XamlRoot = this.XamlRoot;
                 await contentDialog.ShowAsync();
             }
         }

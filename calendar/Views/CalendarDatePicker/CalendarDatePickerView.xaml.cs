@@ -57,7 +57,7 @@ namespace Syncfusion.CalendarDemos.WinUI.Views.CalendarDatePicker
                 }
             }
 
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
         public void Dispose()
