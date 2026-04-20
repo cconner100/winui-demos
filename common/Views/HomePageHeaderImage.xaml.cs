@@ -280,7 +280,7 @@ namespace Syncfusion.DemosCommon.WinUI
         /// <summary>
         /// Gets the title for the Controls Gallery, general for WinUI.
         /// </summary>
-        public static string ControlsGalleryText => "Gallery for WinUI";
+        public static string ControlsGalleryText => "Gallery for UNO";
         /// <summary> 
         /// Gets the link to the Syncfusion WinUI forums page. 
         /// </summary>
