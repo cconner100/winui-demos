@@ -101,14 +101,14 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 DemoView = typeof(TreeGrid.Filtering),
                 ShowInfoPanel = true
             };
-			
+
 			List<Documentation> filteringDocumentations = new List<Documentation>();
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - FilterLevel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_FilterLevel") });
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/filtering") });
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - Programmatic Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/filtering#programmatic-filtering") });
 
             filtering.Documentation.AddRange(filteringDocumentations);
-       
+
             DemoInfo advancedfiltering = new DemoInfo()
             {
                 Name = "Advanced Filtering",
@@ -265,7 +265,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 DemoView = typeof(TreeGrid.RowDragDrop),
                 ShowInfoPanel = true
             };
-			
+
 			List<Documentation> rowdragdropDocumentations = new List<Documentation>();
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_RowDragOver") });
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/row-drag-and-drop") });
@@ -273,7 +273,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop Customization Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/row-drag-and-drop#customizing-row-drag-and-drop-operation") });
 
             rowdragdrop.Documentation.AddRange(rowdragdropDocumentations);
-			
+
 			DemoInfo stackedHeaders = new DemoInfo()
             {
                 Name = "Stacked Headers",
@@ -289,7 +289,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             stackedheadersDocumentations.Add(new Documentation() { Content = "TreeGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/columns#stacked-headers") });
 
             stackedHeaders.Documentation.AddRange(stackedheadersDocumentations);
-           
+
             DemoInfo styling = new DemoInfo()
             {
                 Name = "Styling",
@@ -336,10 +336,10 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 checkboxselection,
                 columnsizer,
                 freezecolumns,
-                clipboardoperation, 
+                clipboardoperation,
  				stackedHeaders,
                 styling,
-                conditionalstyling 
+                conditionalstyling
             };
 
             var controlInfo = new ControlInfo()
