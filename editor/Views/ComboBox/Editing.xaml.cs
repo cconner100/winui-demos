@@ -1,10 +1,3 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Input;
 using Syncfusion.UI.Xaml.Core;
@@ -59,7 +52,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.ComboBox
             };
 
 
-            cd.XamlRoot = this.Content.XamlRoot;
+            cd.XamlRoot = this.XamlRoot;
             var result = await cd.ShowAsync();
         }
 

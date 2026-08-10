@@ -1,10 +1,3 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -103,6 +96,12 @@ namespace Syncfusion.DemosCommon.WinUI
         /// </summary>
         [Display(Name = "Smart AI Solutions")]
         SmartAISolutions,
+
+        /// <summary>
+        /// Represents the SfMarkdownViewer control.
+        /// </summary>
+        [Display(Name = "MarkdownViewer")]
+        MarkdownViewer,
 
         /// <summary>
         /// Represents the SfDataGrid control.
@@ -309,6 +308,12 @@ namespace Syncfusion.DemosCommon.WinUI
         EssentialDocIO,
 
         /// <summary>
+        /// Represents the EssentialMarkdown library for Markdown document manipulation.
+        /// </summary>
+        [Display(Name = "Markdown")]
+        EssentialMarkdown,
+
+        /// <summary>
         /// Represents the SfShadow control for applying shadows.
         /// </summary>
         [Display(Name = "Shadow")]
@@ -349,6 +354,7 @@ namespace Syncfusion.DemosCommon.WinUI
         /// </summary>
         [Display(Name = "AIAssistView")]
         SfAIAssistView
+       
     }
 
     /// <summary>

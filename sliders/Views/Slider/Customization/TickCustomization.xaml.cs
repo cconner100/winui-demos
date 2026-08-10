@@ -1,26 +1,50 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-
+﻿
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace Syncfusion.SliderDemos.WinUI.Views.Slider
 {
     using Microsoft.UI.Xaml.Controls;
+    using System;
 
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class TickCustomization : Page
+    public sealed partial class TickCustomization : Page, IDisposable
     {
         public TickCustomization()
         {
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Dispose all the allocated resources.
+        /// </summary>
+        public void Dispose()
+        {
+            if (this.activeTickSlider != null)
+            {
+                this.activeTickSlider.Dispose();
+                this.activeTickSlider = null;
+            }
+
+            if (this.tickOffsetSlider != null)
+            {
+                this.tickOffsetSlider.Dispose();
+                this.tickOffsetSlider = null;
+            }
+
+            if (this.tickStyleSlider != null)
+            {
+                this.tickStyleSlider.Dispose();
+                this.tickStyleSlider = null;
+            }
+
+            if (this.tickSizeSlider != null)
+            {
+                this.tickSizeSlider.Dispose();
+                this.tickSizeSlider = null;
+            }
         }
     }
 }

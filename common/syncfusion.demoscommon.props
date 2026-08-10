@@ -299,6 +299,9 @@
 		<Content Include="..\Common\Assets\Control Images\AIAssistView.png">
 			<Link>Common\Assets\Control Images\AIAssistView.png</Link>
 		</Content>
+		<Content Include="..\Common\Assets\Control Images\MarkdownViewer.png">
+			<Link>Common\Assets\Control Images\MarkdownViewer.png</Link>
+		</Content>
 		<Content Include="..\Common\Assets\ControlIcons.ttf">
 			<Link>Common\Assets\ControlIcons.ttf</Link>
 		</Content>

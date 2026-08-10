@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Syncfusion.DemosCommon.WinUI;
+﻿using Syncfusion.DemosCommon.WinUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +40,7 @@ namespace Syncfusion.DataGridDemos.WinUI
             {
                 Name = "Selection",
                 Category = "Selection",
-                DemoType = DemoTypes.Updated,
+                DemoType = DemoTypes.None,
                 Description = "The DataGrid control provides support to select rows and cells in different modes. Select one or more rows or cells programmatically or by mouse and keyboard interaction.",
                 DemoView = typeof(DataGrid.Selection),
                 ShowInfoPanel = true
@@ -386,7 +379,7 @@ namespace Syncfusion.DataGridDemos.WinUI
             {
                 Name = "Clipboard Operations",
                 Category = "Interactive Features",
-                DemoType = DemoTypes.Updated,
+                DemoType = DemoTypes.None,
                 Description = "The DataGrid control provides interactive support to perform cut, copy, and paste operations by using the CopyOption and PasteOption properties.",
                 DemoView = typeof(DataGrid.ClipboardOperation),
                 ShowInfoPanel = true
@@ -418,16 +411,6 @@ namespace Syncfusion.DataGridDemos.WinUI
             rowdragdropDocumentations.Add(new Documentation() { Content = "DataGrid - Row Drag and Drop Customization Documentation", Uri = new Uri("https://help.syncfusion.com/winui/datagrid/row-drag-and-drop#customizing-row-drag-and-drop-operation") });
 
             rowdragdrop.Documentation.AddRange(rowdragdropDocumentations);
-			
-			DemoInfo excelExporting = new DemoInfo()
-            {
-                Name = "Excel Exporting",
-                Category = "Exporting",
-                DemoType = DemoTypes.None,
-                Description = "This sample showcases the excel exporting capability of DataGrid.",
-                DemoView = typeof(DataGrid.ExcelExporting),
-                ShowInfoPanel = false,
-            };
 			
             DemoInfo datavalitations = new DemoInfo()
             {
@@ -573,7 +556,6 @@ namespace Syncfusion.DataGridDemos.WinUI
                 clipboardoperation, 
                 serialization,
                 customGrouping,
-				excelExporting,
                 styling,
                 conditionalstyling,
                 unboundColumns
@@ -583,7 +565,7 @@ namespace Syncfusion.DataGridDemos.WinUI
             {
                 Control = DemoControl.SfDataGrid,
                 ControlCategory = ControlCategory.Grids,
-                ControlBadge = ControlBadge.Updated,
+                ControlBadge = ControlBadge.None,
                 Description = "The DataGrid is a high performance grid control that displays tabular and hierarchical data. It supports sorting, grouping, filtering, etc.",
                 Glyph = "\uE707",
                 ImageSource = "DataGrid.png"

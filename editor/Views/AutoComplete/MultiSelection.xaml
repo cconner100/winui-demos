@@ -81,10 +81,12 @@
                     </editors:SfAutoComplete>
                 </common:DemoLayout.Example>
                 <common:DemoLayout.Options>
-                    <ComboBox
-                            Width="180"
+                    <editors:SfComboBox
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="5"
                             Header="TextSearchMode"
+                            HorizontalAlignment="Stretch"
                             ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextSearchMode}"
                             SelectedItem="{Binding ElementName=customAutoComplete ,Path=TextSearchMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextSearchMode},Mode=TwoWay}"
                            />

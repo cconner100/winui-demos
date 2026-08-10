@@ -12,8 +12,7 @@
         <local:ViewModel />
     </Page.DataContext>
     <Page.Resources>
-        <DataTemplate x:Name="RibbonGalleryItemTemplate"
-                      x:DataType="local:FontStyleInfo">
+        <DataTemplate x:DataType="local:FontStyleInfo">
             <StackPanel>
                 <TextBlock Margin="{x:Bind Margin}"
                            HorizontalAlignment="Center"

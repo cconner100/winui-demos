@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Syncfusion.DemosCommon.WinUI;
+﻿using Syncfusion.DemosCommon.WinUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +58,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             {
                 Name = "Selection",
                 Category = "Editing and Selection",
-                DemoType = DemoTypes.Updated,
+                DemoType = DemoTypes.None,
                 Description = "The TreeGrid control provides interactive support for selecting rows in different modes smoothly. Select one or more rows programmatically or by mouse and keyboard interaction.",
                 DemoView = typeof(TreeGrid.Selection),
                 ShowInfoPanel = true
@@ -108,14 +101,14 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 DemoView = typeof(TreeGrid.Filtering),
                 ShowInfoPanel = true
             };
-			
+
 			List<Documentation> filteringDocumentations = new List<Documentation>();
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - FilterLevel API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_FilterLevel") });
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/filtering") });
             filteringDocumentations.Add(new Documentation() { Content = "TreeGrid - Programmatic Filtering Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/filtering#programmatic-filtering") });
 
             filtering.Documentation.AddRange(filteringDocumentations);
-       
+
             DemoInfo advancedfiltering = new DemoInfo()
             {
                 Name = "Advanced Filtering",
@@ -249,7 +242,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             {
                 Name = "Clipboard Operations",
                 Category = "Interactive Features",
-                DemoType = DemoTypes.Updated,
+                DemoType = DemoTypes.None,
                 Description = "The TreeGrid control provides interactive support to perform cut, copy, and paste operations by using the CopyOption and PasteOption properties.",
                 DemoView = typeof(TreeGrid.ClipboardOperation),
                 ShowInfoPanel = true
@@ -272,7 +265,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 DemoView = typeof(TreeGrid.RowDragDrop),
                 ShowInfoPanel = true
             };
-			
+
 			List<Documentation> rowdragdropDocumentations = new List<Documentation>();
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.TreeGrid.SfTreeGrid.html#Syncfusion_UI_Xaml_TreeGrid_SfTreeGrid_RowDragOver") });
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/row-drag-and-drop") });
@@ -280,7 +273,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             rowdragdropDocumentations.Add(new Documentation() { Content = "TreeGrid - Row Drag and Drop Customization Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/row-drag-and-drop#customizing-row-drag-and-drop-operation") });
 
             rowdragdrop.Documentation.AddRange(rowdragdropDocumentations);
-			
+
 			DemoInfo stackedHeaders = new DemoInfo()
             {
                 Name = "Stacked Headers",
@@ -296,7 +289,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             stackedheadersDocumentations.Add(new Documentation() { Content = "TreeGrid - Stacked Headers Documentation", Uri = new Uri("https://help.syncfusion.com/winui/treegrid/columns#stacked-headers") });
 
             stackedHeaders.Documentation.AddRange(stackedheadersDocumentations);
-           
+
             DemoInfo styling = new DemoInfo()
             {
                 Name = "Styling",
@@ -329,16 +322,6 @@ namespace Syncfusion.TreeGridDemos.WinUI
 
             conditionalstyling.Documentation.AddRange(conditionalstylingDocumentations);
 
-            DemoInfo excelExporting = new DemoInfo()
-            {
-                Name = "Excel Exporting",
-                Category = "Exporting",
-                DemoType = DemoTypes.None,
-                Description = "This sample showcases the excel exporting capability of TreeGrid.",
-                DemoView = typeof(TreeGrid.ExcelExporting),
-                ShowInfoPanel = false
-            };
-
             var demos = new List<DemoInfo>()
             {
                 selfrelational,
@@ -353,18 +336,17 @@ namespace Syncfusion.TreeGridDemos.WinUI
                 checkboxselection,
                 columnsizer,
                 freezecolumns,
-                clipboardoperation, 
+                clipboardoperation,
  				stackedHeaders,
                 styling,
-                conditionalstyling,
-                excelExporting 
+                conditionalstyling
             };
 
             var controlInfo = new ControlInfo()
             {
                 Control = DemoControl.SfTreeGrid,
                 ControlCategory = ControlCategory.Grids,
-                ControlBadge = ControlBadge.Updated,
+                ControlBadge = ControlBadge.None,
                 Description = "The TreeGrid control displays the hierarchical or self-relational data in a tree structure with multicolumn interface like multicolumn treeview.",
                 Glyph = "\uE702",
                 ImageSource = "TreeGrid.png"

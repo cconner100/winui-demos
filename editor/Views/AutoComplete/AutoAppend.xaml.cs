@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Microsoft.UI.Xaml.Controls;
+﻿using Microsoft.UI.Xaml.Controls;
 using Syncfusion.UI.Xaml.Editors;
 
 namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
@@ -23,7 +16,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
             this.InitializeComponent();
         }
 
-        private void appendTypeSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void appendTypeSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (appendType.SelectedIndex == 0)
             {

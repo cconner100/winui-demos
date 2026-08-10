@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Microsoft.UI;
+﻿using Microsoft.UI;
 using Microsoft.UI.Text;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -15,6 +8,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
+using Syncfusion.UI.Xaml.Editors;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,7 +37,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
             foregroundColorPicker.SelectedBrush = new SolidColorBrush(Colors.Red);
         }
 
-        private void OnFontStyleSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void OnFontStyleSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (fontStyle.SelectedIndex == 0)
             {
@@ -58,7 +52,7 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
                 autoComplete.HighlightedTextFontStyle = FontStyle.Oblique;
             }
         }
-        private void OnFontWeightSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void OnFontWeightSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (fontWeight.SelectedIndex == 0)
             {
@@ -105,12 +99,14 @@ namespace Syncfusion.EditorDemos.WinUI.Views.AutoComplete
                 autoComplete.HighlightedTextFontWeight = FontWeights.ExtraBlack;
             }
         }
-        private void OnFontSizeSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void OnFontSizeSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
-            string value = (e.AddedItems[0] as ComboBoxItem).Content as string;
-            autoComplete.HighlightedTextFontSize = Convert.ToDouble(value);
+            if (fontSize.SelectedItem is string value)
+            {
+                autoComplete.HighlightedTextFontSize = Convert.ToDouble(value);
+            }
         }
-        private void OnTextHighlightModeSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void OnTextHighlightModeSelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             if (textHighlightMode.SelectedIndex == 0)
             {

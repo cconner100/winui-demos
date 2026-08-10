@@ -18,24 +18,27 @@
   <Import Project="..\treegrid\syncfusion.treegrid.props" />
   <Import Project="..\treeview\syncfusion.treeview.props" />
 	<Import Project="..\chat\syncfusion.chat.props" />
-	<Import Project="..\kanban\syncfuion.kanban.props"/>
+	<Import Project="..\kanban\syncfusion.kanban.props" />
+	<Import Project="..\markdownviewer\syncfusion.markdownviewer.props" />
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Sliders.WinUI" Version="33.1.44" />
-	  <PackageReference Include="Syncfusion.Barcode.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Compression.NET" Version="33.1.44" />
+    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Sliders.WinUI" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.Barcode.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Compression.NET" Version="34.2.2" />
     <PackageReference Include="ColorCode.WinUI" Version="2.0.15" />
-    <PackageReference Include="Syncfusion.Calendar.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Chart.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Grid.WinUI" Version="33.1.44" />
-	  <PackageReference Include="Syncfusion.GridExport.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.GridCommon.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Ribbon.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.Scheduler.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.TreeView.WinUI" Version="33.1.44" />
-    <PackageReference Include="Syncfusion.XlsIO.NET" Version="33.1.44" />
-	  <PackageReference Include="Syncfusion.Kanban.WinUI" Version="33.1.44" />
-	  <PackageReference Include="Syncfusion.Chat.WinUI" Version="33.1.44"/>
+    <PackageReference Include="Syncfusion.Calendar.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Chart.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Grid.WinUI" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.GridExport.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.GridCommon.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Ribbon.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Scheduler.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.TreeView.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.XlsIO.NET" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.Kanban.WinUI" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.Chat.WinUI" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.MarkdownViewer.WinUI" Version="34.2.2" />
+	  <PackageReference Include="Syncfusion.Telemetry" Version="34.2.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 </Project>

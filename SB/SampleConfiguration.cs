@@ -1,26 +1,33 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 namespace Syncfusion.SampleBrowser.WinUI
 {
     public class SamplesConfiguration
     {
         public SamplesConfiguration()
         {
-#if !DOCUMENT_SDK
+
+#if GRID_SDK
             new DataGridDemos.WinUI.SamplesConfiguration();
             new TreeGridDemos.WinUI.SamplesConfiguration();
+#elif GANTT_SDK
+            new KanbanDemos.WinUI.SamplesConfiguration();
+#elif SCHEDULER_SDK
+            new SchedulerDemos.WinUI.SamplesConfiguration();
+            new CalendarDemos.WinUI.SamplesConfiguration();
+            new DateTimeDemos.WinUI.SamplesConfiguration();
+#elif CHART_SDK
+            new ChartDemos.WinUI.SamplesConfiguration();
+            new RadialGaugeDemos.WinUI.SamplesConfiguration();
+            new LinearGaugeDemos.WinUI.SamplesConfiguration();
+            new BarcodeDemos.WinUI.SamplesConfiguration();
+#endif
+#if UISuiteSDK
+            new MarkdownViewerDemos.WinUI.SamplesConfiguration();
             new ChartDemos.WinUI.SamplesConfiguration();
             new RadialGaugeDemos.WinUI.SamplesConfiguration();
             new LinearGaugeDemos.WinUI.SamplesConfiguration();
             new BarcodeDemos.WinUI.SamplesConfiguration();
             new RibbonDemos.WinUI.SamplesConfiguration();
             new TreeViewDemos.WinUI.SamplesConfiguration();
-            new SchedulerDemos.WinUI.SamplesConfiguration();
             new SliderDemos.WinUI.SamplesConfiguration();
             new AvatarViewDemos.WinUI.SamplesConfiguration();
             new EditorDemos.WinUI.SamplesConfiguration();
@@ -29,13 +36,32 @@ namespace Syncfusion.SampleBrowser.WinUI
             new ShimmerDemos.WinUI.SamplesConfiguration();
             new ChatDemos.WinUI.SamplesConfiguration();
             new NotificationDemos.WinUI.SamplesConfiguration();
+			new DataGridDemos.WinUI.SamplesConfiguration();
+            new TreeGridDemos.WinUI.SamplesConfiguration();
+
+#endif
+
+#if COMPLETE
+            new SchedulerDemos.WinUI.SamplesConfiguration();
             new KanbanDemos.WinUI.SamplesConfiguration();
 #endif
-#if !UISuiteSDK
+
+#if !DOCUMENT_SDK && !GRID_SDK && !UISuiteSDK && !SCHEDULER_SDK && !GANTT_SDK && !CHART_SDK
+            new ChartDemos.WinUI.SamplesConfiguration();
+            new RadialGaugeDemos.WinUI.SamplesConfiguration();
+            new LinearGaugeDemos.WinUI.SamplesConfiguration();
+            new BarcodeDemos.WinUI.SamplesConfiguration();        
+            new SchedulerDemos.WinUI.SamplesConfiguration();          
+            new CalendarDemos.WinUI.SamplesConfiguration();
+			new ChatDemos.WinUI.SamplesConfiguration();
+            new KanbanDemos.WinUI.SamplesConfiguration();
+#endif
+#if !UISuiteSDK && !GRID_SDK && !SCHEDULER_SDK && !GANTT_SDK && !CHART_SDK
             new DocIODemos.WinUI.SamplesConfiguration();
             new PdfDemos.WinUI.SamplesConfiguration();
             new PresentationDemos.WinUI.SamplesConfiguration();
             new XlsIODemos.WinUI.SamplesConfiguration();
+            new MarkdownDemos.WinUI.SamplesConfiguration();
 #endif
         }
     }

@@ -39,10 +39,12 @@
 
                 <common:DemoLayout.Options>
                     <StackPanel>
-                        <ComboBox
-                            Width="180"
+                        <editors:SfComboBox
+                            MinWidth="220"
+                            MinHeight="40"
                             Margin="5"
                             Header="TextSearchMode"
+                            HorizontalAlignment="Stretch"
                             ItemsSource="{common:EnumToStringValues Type=editors:AutoCompleteTextSearchMode}"
                             SelectedItem="{Binding ElementName=FilterAutoComplete ,Path=TextSearchMode,Converter={common:StringToEnumValueConverter Type=editors:AutoCompleteTextSearchMode},Mode=TwoWay}"
                            />

@@ -1,26 +1,44 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-
+﻿
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace Syncfusion.SliderDemos.WinUI.Views.Slider
 {
     using Microsoft.UI.Xaml.Controls;
+    using System;
 
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ToolTipCustomization : Page
+    public sealed partial class ToolTipCustomization : Page, IDisposable
     {
         public ToolTipCustomization()
         {
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Dispose all the allocated resources.
+        /// </summary>
+        public void Dispose()
+        {
+            if (this.basicCustomizationSlider != null)
+            {
+                this.basicCustomizationSlider.Dispose();
+                this.basicCustomizationSlider = null;
+            }
+
+            if (this.styleCustomizationSlider != null)
+            {
+                this.styleCustomizationSlider.Dispose();
+                this.styleCustomizationSlider = null;
+            }
+
+            if (this.templateCustomizationSlider != null)
+            {
+                this.templateCustomizationSlider.Dispose();
+                this.templateCustomizationSlider = null;
+            }
         }
     }
 }

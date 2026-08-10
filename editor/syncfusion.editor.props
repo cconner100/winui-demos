@@ -1,8 +1,6 @@
 <Project>
+	<Import Project="..\datetime\syncfusion.datetime.props" />
 <ItemGroup>
-	<Compile Include="..\Editor\Converters\FormatToStringConverter.cs">
-		<Link>Editor\Converters\FormatToStringConverter.cs</Link>
-	</Compile>
     <Compile Include="..\Editor\Converters\StringToPathConverter.cs">
 		<Link>Editor\Converters\StringToPathConverter.cs</Link>
 	</Compile>
@@ -36,9 +34,6 @@
     <Compile Include="..\Editor\ViewModel\ColorPickerViewModel.cs">
 		<Link>Editor\ViewModel\ColorPickerViewModel.cs</Link>
 	</Compile>
-    <Compile Include="..\Editor\ViewModel\DatePickerViewModel.cs">
-		<Link>Editor\ViewModel\DatePickerViewModel.cs</Link>
-	</Compile>
     <Compile Include="..\Editor\ViewModel\DropDownColorPaletteViewModel.cs">
 		<Link>Editor\ViewModel\DropDownColorPaletteViewModel.cs</Link>
 	</Compile>
@@ -47,9 +42,6 @@
 	</Compile>
     <Compile Include="..\Editor\ViewModel\SegmentedViewModel.cs">
 		<Link>Editor\ViewModel\SegmentedViewModel.cs</Link>
-	</Compile>
-    <Compile Include="..\Editor\ViewModel\TimePickerViewModel.cs">
-		<Link>Editor\ViewModel\TimePickerViewModel.cs</Link>
 	</Compile>
     <Compile Include="..\Editor\Views\AutoComplete\Resources\CapitalCitySearchingBehavior.cs">
 		<Link>Editor\Views\AutoComplete\Resources\CapitalCitySearchingBehavior.cs</Link>
@@ -131,17 +123,6 @@
     <Compile Include="..\Editor\SamplesConfiguration.cs">
 		<Link>Editor\SamplesConfiguration.cs</Link>
 	</Compile>
-    <Compile Include="..\Editor\Views\DatePicker\Customization.xaml.cs">
-		<Link>Editor\Views\DatePicker\Customization.xaml.cs</Link>
-      <DependentUpon>..\Editor\Views\DatePicker\Customization.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="..\Editor\Views\DatePicker\DatePickerView.xaml.cs">
-		<Link>Editor\Views\DatePicker\DatePickerView.xaml.cs</Link>
-      <DependentUpon>..\Editor\Views\DatePicker\DatePickerView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="..\Editor\Views\DatePicker\Resources\DateItemTemplateSelector.cs">
-		<Link>Editor\Views\DatePicker\Resources\DateItemTemplateSelector.cs</Link>
-	</Compile>
     <Compile Include="..\Editor\Views\DropDownColorPalette\DropDownColorPaletteView.xaml.cs">
 		<Link>Editor\Views\DropDownColorPalette\DropDownColorPaletteView.xaml.cs</Link>
       <DependentUpon>..\Editor\Views\DropDownColorPalette\DropDownColorPaletteView.xaml</DependentUpon>
@@ -157,17 +138,6 @@
     <Compile Include="..\Editor\Views\SegmentedControl\GettingStarted.xaml.cs">
 		<Link>Editor\Views\SegmentedControl\GettingStarted.xaml.cs</Link>
 	   <DependentUpon>..\Editor\Views\SegmentedControl\GettingStarted.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="..\Editor\Views\TimePicker\Customization.xaml.cs">
-		<Link>Editor\Views\TimePicker\Customization.xaml.cs</Link>
-      <DependentUpon>..\Editor\Views\TimePicker\Customization.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="..\Editor\Views\TimePicker\Resources\TimeItemTemplateSelector.cs">
-		<Link>Editor\Views\TimePicker\Resources\TimeItemTemplateSelector.cs</Link>
-	</Compile>
-    <Compile Include="..\Editor\Views\TimePicker\TimePickerView.xaml.cs">
-		<Link>Editor\Views\TimePicker\TimePickerView.xaml.cs</Link>
-      <DependentUpon>..\Editor\Views\TimePicker\TimePickerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="..\Editor\Views\NumberBox\CultureView.xaml.cs">
 		<Link>Editor\Views\NumberBox\CultureView.xaml.cs</Link>
@@ -409,12 +379,6 @@
     <Content Include="..\Editor\Assets\ColorPicker\ColorPickerModes_xaml.txt">
 		<Link>Editor\Assets\ColorPicker\ColorPickerModes_xaml.txt</Link>
 	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\BlackoutDateTemplate_cs.txt">
-		<Link>Editor\Assets\DatePicker\BlackoutDateTemplate_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\BlackoutDateTemplate_xaml.txt">
-		<Link>Editor\Assets\DatePicker\BlackoutDateTemplate_xaml.txt</Link>
-	</Content>
     <Content Include="..\Editor\Assets\ComboBox\Cascading_xaml.txt">
 		<Link>Editor\Assets\ComboBox\Cascading_xaml.txt</Link>
 	</Content>
@@ -478,45 +442,6 @@
     <Content Include="..\Editor\Assets\ComboBox\MultiSelectionBoxItemTemplate_cs.txt">
 		<Link>Editor\Assets\ComboBox\MultiSelectionBoxItemTemplate_cs.txt</Link>
 	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\CustomFormatString_cs.txt">
-		<Link>Editor\Assets\DatePicker\CustomFormatString_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\CustomFormatString_xaml.txt">
-		<Link>Editor\Assets\DatePicker\CustomFormatString_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\DateTimeFormatting_xaml.txt">
-		<Link>Editor\Assets\DatePicker\DateTimeFormatting_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\DropdownHeaderTemplate_xaml.txt">
-		<Link>Editor\Assets\DatePicker\DropdownHeaderTemplate_xaml.txt</Link>
-	</Content>
-	<Content Include="..\Editor\Assets\DatePicker\ExcludeWeekEndDates_cs.txt">
-		<Link>Editor\Assets\DatePicker\ExcludeWeekEndDates_cs.txt</Link>
-	</Content>
-	<Content Include="..\Editor\Assets\DatePicker\ExcludeWeekEndDates_xaml.txt">
-		<Link>Editor\Assets\DatePicker\ExcludeWeekEndDates_xaml.txt</Link>
-	</Content>
-	<Content Include="..\Editor\Assets\DatePicker\ItemContainerStyle_cs.txt">
-		<Link>Editor\Assets\DatePicker\ItemContainerStyle_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\ItemContainerStyle_xaml.txt">
-		<Link>Editor\Assets\DatePicker\ItemContainerStyle_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\ItemCustomization_xaml.txt">
-		<Link>Editor\Assets\DatePicker\ItemCustomization_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\ItemTemplateSelector_cs.txt">
-		<Link>Editor\Assets\DatePicker\ItemTemplateSelector_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\ItemTemplateSelector_xaml.txt">
-		<Link>Editor\Assets\DatePicker\ItemTemplateSelector_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\SimpleDatePicker_xaml.txt">
-		<Link>Editor\Assets\DatePicker\SimpleDatePicker_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\ViewCustomization_xaml.txt">
-		<Link>Editor\Assets\DatePicker\ViewCustomization_xaml.txt</Link>
-	</Content>
     <Content Include="..\Editor\Assets\DDColorPalette\DropDownColorPalette_xaml.txt">
 		<Link>Editor\Assets\DDColorPalette\DropDownColorPalette_xaml.txt</Link>
 	</Content>
@@ -556,36 +481,6 @@
   <Content Include="..\Editor\Assets\SegCtrl\customization_xaml.txt">
     <Link>Editor\Assets\SegCtrl\customization_xaml.txt</Link>
   </Content>  
-  <Content Include="..\Editor\Assets\TimePicker\DropdownHeaderTemplate_xaml.txt">
-		<Link>Editor\Assets\TimePicker\DropdownHeaderTemplate_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\ItemCustomization_xaml.txt">
-		<Link>Editor\Assets\TimePicker\ItemCustomization_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\ItemTemplateSelector_cs.txt">
-		<Link>Editor\Assets\TimePicker\ItemTemplateSelector_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\ItemTemplateSelector_xaml.txt">
-		<Link>Editor\Assets\TimePicker\ItemTemplateSelector_xaml.txt</Link>
-	</Content>
-	<Content Include="..\Editor\Assets\DatePicker\FlightBookingOnline_cs.txt">
-		<Link>Editor\Assets\DatePicker\FlightBookingOnline_cs.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\DatePicker\FlightBookingOnline_xaml.txt">
-		<Link>Editor\Assets\DatePicker\FlightBookingOnline_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\SimpleTimePicker_xaml.txt">
-		<Link>Editor\Assets\TimePicker\SimpleTimePicker_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\TimeFormatting_xaml.txt">
-		<Link>Editor\Assets\TimePicker\TimeFormatting_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\TimePickerMinutesInterval_xaml.txt">
-		<Link>Editor\Assets\TimePicker\TimePickerMinutesInterval_xaml.txt</Link>
-	</Content>
-    <Content Include="..\Editor\Assets\TimePicker\ViewCustomization_xaml.txt">
-		<Link>Editor\Assets\TimePicker\ViewCustomization_xaml.txt</Link>
-	</Content>
 	<Content Include="..\Editor\Assets\Rating\custompath_xaml.txt">
 	   <Link>Editor\Assets\Rating\custompath_xaml.txt</Link>
     </Content>
@@ -698,16 +593,6 @@
 		<Link>Editor\Views\ComboBox\Searching.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="..\Editor\Views\DatePicker\Customization.xaml">
-		<Link>Editor\Views\DatePicker\Customization.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\Editor\Views\DatePicker\DatePickerView.xaml">
-		<Link>Editor\Views\DatePicker\DatePickerView.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="..\Editor\Views\DropDownColorPalette\DropDownColorPaletteView.xaml">
 		<Link>Editor\Views\DropDownColorPalette\DropDownColorPaletteView.xaml</Link>
       <SubType>Designer</SubType>
@@ -715,16 +600,6 @@
     </Page>
     <Page Include="..\Editor\Views\DropDownColorPicker\DropDownColorPickerView.xaml">
 		<Link>Editor\Views\DropDownColorPicker\DropDownColorPickerView.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\Editor\Views\TimePicker\Customization.xaml">
-		<Link>Editor\Views\TimePicker\Customization.xaml</Link>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="..\Editor\Views\TimePicker\TimePickerView.xaml">
-		<Link>Editor\Views\TimePicker\TimePickerView.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -67,7 +67,7 @@
                                 <syncfusion:GridTextColumn MappingName="Title" MinimumWidth="180" />
                                 <syncfusion:GridTextColumn MappingName="Rating" TextAlignment="Right" />
                                 <syncfusion:GridTextColumn HeaderText="Contact ID" MappingName="ContactID" TextAlignment="Right" />
-                                <syncfusion:GridDateColumn DisplayBinding="{Binding Path=BirthDate}" MinimumWidth="100" HeaderText="Birth Date" TextAlignment="Right" />
+                                <syncfusion:GridDateColumn MappingName="BirthDate" DisplayBinding="{Binding Path=BirthDate}" MinimumWidth="100" HeaderText="Birth Date" TextAlignment="Right" />
                                 <syncfusion:GridTextColumn MappingName="Gender" />
                                 <syncfusion:GridTextColumn HeaderText="Sick Leave Hours" MappingName="SickLeaveHours" TextAlignment="Right" MinimumWidth="120" />
                                 <syncfusion:GridTextColumn MappingName="Salary" />

@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Syncfusion.UI.Xaml.Core;
@@ -373,7 +366,7 @@ namespace Syncfusion.DemosCommon.WinUI
                 {
                     Control = DemoControl.SmartAISolutions,
                     ControlCategory = ControlCategory.SmartComponents,
-                    ControlBadge = ControlBadge.Updated,
+                    ControlBadge = ControlBadge.None,
                     Description = "Showcasing how Syncfusion® components work with AI tools to enhance functionality and deliver smarter solutions.",
                     Glyph = "\uE726",
                     ImageSource = "SmartAISolution.png",

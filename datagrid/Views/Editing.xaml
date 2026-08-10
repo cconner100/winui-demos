@@ -34,7 +34,7 @@
                         LiveDataUpdateMode="AllowDataShaping"
                         ShowRowHeader="True">
                             <dataGrid:SfDataGrid.Columns>
-                                <dataGrid:GridCheckBoxColumn HeaderText="Availability" MappingName="EmployeeStatus" AllowEditing="True"/>
+                                <dataGrid:GridCheckBoxColumn HeaderText="Availability" MappingName="EmployeeStatus"/>
                                 <dataGrid:GridNumericColumn HeaderText="Employee ID" MappingName="EmployeeID" TextAlignment="Right" />
                                 <dataGrid:GridTextColumn HeaderText="Employee Name" MappingName="Name" />
                                 <dataGrid:GridTextColumn MappingName="Gender" />

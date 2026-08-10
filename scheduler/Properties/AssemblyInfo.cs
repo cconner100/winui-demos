@@ -1,10 +1,3 @@
-﻿#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -15,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Syncfusion.SchedulerDemos.WinUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Syncfusion Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Syncfusion.SchedulerDemos.WinUI")]
-[assembly: AssemblyCopyright("Copyright © 2001-2026 Syncfusion® Inc.")]
+[assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,7 +23,7 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("33.1.44")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// [assembly: AssemblyVersion("34.2.2")]
+[assembly: AssemblyVersion("34.2.2")]
+[assembly: AssemblyFileVersion("34.2.2")]
 [assembly: ComVisible(false)]

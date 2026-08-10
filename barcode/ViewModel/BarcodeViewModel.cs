@@ -1,11 +1,4 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Data;
 using Syncfusion.UI.Xaml.Barcode;
 using System;
@@ -64,8 +57,6 @@ namespace Syncfusion.BarcodeDemos.WinUI
             Symbology.Add(new BarcodeModel() { SymobologyItem = "Code128B" });
             Symbology.Add(new BarcodeModel() { SymobologyItem = "Code128C" });
             Symbology.Add(new BarcodeModel() { SymobologyItem = "UpcBarcode" });
-            Symbology.Add(new BarcodeModel() { SymobologyItem = "GS1Code128Barcode" });
-            Symbology.Add(new BarcodeModel() { SymobologyItem = "Pdf417Barcode" });
             EncodingValues.Add(new BarcodeModel() { DataMatrixEncoding = "Auto" });
             EncodingValues.Add(new BarcodeModel() { DataMatrixEncoding = "ASCII" });
             EncodingValues.Add(new BarcodeModel() { DataMatrixEncoding = "ASCIINumeric" });
@@ -277,14 +268,6 @@ namespace Syncfusion.BarcodeDemos.WinUI
                 case "UpcBarcode":
                     UpcBarcode upcBarcode = new UpcBarcode();
                     SymbologyItem = upcBarcode;
-                    break;
-                case "GS1Code128Barcode":
-                    GS1Code128Barcode gS1Code128Barcode = new GS1Code128Barcode();
-                    SymbologyItem = gS1Code128Barcode;
-                    break;
-                case "Pdf417Barcode":
-                    Pdf417Barcode pdf417Barcode = new Pdf417Barcode();
-                    SymbologyItem = pdf417Barcode;
                     break;
             }
         }

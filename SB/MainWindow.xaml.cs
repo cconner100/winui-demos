@@ -1,10 +1,3 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
@@ -40,6 +33,14 @@ namespace Syncfusion.SampleBrowser.WinUI
             this.InitializeComponent();
 #if DOCUMENT_SDK
             this.Title = "Syncfusion® Document SDK for WinUI";
+#elif GRID_SDK
+            this.Title = "Syncfusion® Grid SDK for WinUI";
+#elif GANTT_SDK
+            this.Title = "Syncfusion® Gantt SDK for WinUI";
+#elif SCHEDULER_SDK
+            this.Title = "Syncfusion® Scheduler SDK for WinUI";
+#elif CHART_SDK
+            this.Title = "Syncfusion® Chart SDK for WinUI";
 #else
             this.Title = "Syncfusion® Gallery for WinUI";
 #endif

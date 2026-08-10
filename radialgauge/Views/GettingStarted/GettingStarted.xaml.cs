@@ -1,17 +1,11 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-
+﻿
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace Syncfusion.RadialGaugeDemos.WinUI.Views
 {
     using Microsoft.UI.Xaml.Controls;
+    using Syncfusion.UI.Xaml.Editors;
     using Syncfusion.UI.Xaml.Gauges;
     using System;
 
@@ -26,7 +20,7 @@ namespace Syncfusion.RadialGaugeDemos.WinUI.Views
             this.InitializeComponent();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ComboBox_SelectionChanged(object sender, ComboBoxSelectionChangedEventArgs e)
         {
             switch(annotation.DirectionUnit)
             {

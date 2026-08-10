@@ -1,10 +1,3 @@
-#region Copyright Syncfusion® Inc. 2001-2026.
-// Copyright Syncfusion® Inc. 2001-2026. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
 using Syncfusion.DemosCommon.WinUI;
 using System;
 using System.Collections.Generic;
@@ -627,7 +620,7 @@ namespace Syncfusion.ChartDemos.WinUI
             {
                 Name = "Financial Charts",
                 Category = "Basic Charts",
-                DemoType = DemoTypes.New,
+                DemoType = DemoTypes.None,
             };
 
             DemoInfo candleChartSample = new DemoInfo()
@@ -655,7 +648,7 @@ namespace Syncfusion.ChartDemos.WinUI
 
             List<Documentation> ohlcChartDocumentation = new List<Documentation>()
             {
-                new Documentation(){ Content = "OHLC Series API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.OHLCSeries.html")},
+                new Documentation(){ Content = "OHLC Series API Reference", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Charts.HiLoOpenCloseSeries.html")},
                 new Documentation(){ Content = "OHLC Series Documentation", Uri = new Uri("https://help.syncfusion.com/winui/cartesian-charts/ohlc")},
             };
             ohlcChartSample.Documentation.AddRange(ohlcChartDocumentation);

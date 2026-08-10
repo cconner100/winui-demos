@@ -4,6 +4,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:common="using:Syncfusion.DemosCommon.WinUI"
+      xmlns:editors="using:Syncfusion.UI.Xaml.Editors"
       xmlns:enumextension="using:Syncfusion.DemosCommon.WinUI"
       xmlns:local="using:Syncfusion.TreeViewDemos.WinUI"
       xmlns:treeView="using:Syncfusion.UI.Xaml.TreeView"
@@ -54,7 +55,7 @@
                     A simple TreeView with data binding using ObservableCollection.
                 </common:DemoLayout.HeaderText>
                 <common:DemoLayout.Options>
-                    <StackPanel>
+                    <StackPanel MinWidth="240">
                         <CheckBox x:Name="showLinesCheckBox"
                                   Content="ShowLines"
                                   IsChecked="False" />
@@ -79,14 +80,15 @@
                                 Command="{Binding CollapseCommand}"
                                 CommandParameter="{Binding ElementName=treeView}"
                                 Content="Collapse All Nodes" />
-                        <ComboBox x:Name="selectionComboBox"
-                                  Width="150"
-                                  SelectedIndex="3"
-                                  Header="SelectionMode"
-                                  Margin="0,10,0,0"
-                                  ItemsSource="{enumextension:EnumToStringValuesExtension Type=treeView:SelectionMode}"
-                                  SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=treeView:SelectionMode}, ElementName=treeView, Path=SelectionMode, Mode=TwoWay}">                           
-                        </ComboBox>
+                        <editors:SfComboBox x:Name="selectionComboBox"
+                                            MinWidth="220"
+                                            MinHeight="40"
+                                            SelectedIndex="3"
+                                            Header="SelectionMode"
+                                            Margin="0,10,0,0"
+                                            HorizontalAlignment="Stretch"
+                                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=treeView:SelectionMode}"
+                                            SelectedItem="{Binding Converter={enumextension:StringToEnumValueConverter Type=treeView:SelectionMode}, ElementName=treeView, Path=SelectionMode, Mode=TwoWay}" />
                     </StackPanel>
                 </common:DemoLayout.Options>
                 <common:DemoLayout.Xaml>

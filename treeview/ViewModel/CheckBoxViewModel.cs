@@ -1,4 +1,4 @@
-#region Copyright Syncfusion Inc. 2001 - 2011
+﻿#region Copyright Syncfusion Inc. 2001 - 2011
 // Copyright Syncfusion Inc. 2001 - 2011. All rights reserved.
 // Use of this code is subject to the terms of our license.
 // A copy of the current license can be obtained at any time by e-mailing
@@ -174,7 +174,7 @@ namespace Syncfusion.TreeViewDemos.WinUI
     /// <summary>
     /// Represents the < see cref="NullableTreeCheckbox"/ > class that maintains the checked states.
     /// </summary>
-    public class NullableTreeCheckbox : DependencyObject
+    public partial class NullableTreeCheckbox : DependencyObject
     {
         /// <summary>
         /// Identifies the <see cref="IsEnabled"/> dependency property.
