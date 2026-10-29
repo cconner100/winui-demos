@@ -29,6 +29,35 @@ This section guides you to use the Syncfusion WinUI demos in your applications.
 * If you unzip individual demos, they will not build due to references to other portions of the ZIP file that were not unzipped. You must unzip the entire archive if you intend to build the samples.
 
 
+## Build the demos with local Uno packages
+
+Place the `uno-syncfusion` checkout beside this repository and build its Release NuGet packages first. Then run:
+
+```bash
+./build-uno.sh
+```
+
+The script builds the Uno sample-browser host for `net10.0-desktop` in Release mode using this checkout's demo source. The host restores `Syncfusion.*.UNO` and `UnoUnimplemented` from `uno-syncfusion/Nuget/Release`, using `SyncfusionUnoPackageVersion` from that checkout, currently `35.1.38`.
+
+To sweep every screen exposed by the Uno browser, run:
+
+```bash
+python3 test-all-uno.py --output /tmp/uno-control-sweep
+```
+
+Use a new output directory for each run. The runner starts fresh processes in batches of 20, saves screenshots and option-check results, and continues past screens that stall for 120 seconds. It tests the Uno browser catalog; controls missing from that catalog need separate validation. Use `--start` and `--end` for a selected ordinal range.
+
+For an Android emulator with the sample-browser APK installed, enable root ADB access for copying the app's private test artifacts, then run:
+
+```bash
+$HOME/Library/Android/sdk/platform-tools/adb root
+python3 test-all-uno.py --android emulator-5554 --output /tmp/uno-android-sweep
+```
+
+The runner launches fresh activity instances, passes each screen range through intent extras, and retrieves reports and screenshots after each batch. This mode requires a test emulator that supports `adb root`.
+
+For a different checkout location, set `UNO_SYNCFUSION_ROOT`. To override the package version, pass `-p:SyncfusionUnoPackageVersion=<version>` to the script. The Uno host supports a subset of the WinUI demo catalog; its compatibility files and project configuration live in `uno-syncfusion/uno-ui-demos`.
+
 ## <a name="controls-catalog"></a>Controls Catalog ## 
 
 <table>
