@@ -268,21 +268,27 @@
                         
         private async void OnDeserializeDataGrid(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
-            var folder = ApplicationData.Current.LocalFolder;
             try
             {
-                var storageFile = await folder.GetFileAsync("DataGrid.xml");
-                var options = new DeserializationOptions()
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SampleBrowser");
+                string filePath = Path.Combine(folderPath, "DataGrid.xml");
+
+                if (File.Exists(filePath))
                 {
-                    DeserializeColumns = (bool)this.DeserializeColumns.IsChecked,
-                    DeserializeFiltering = (bool)this.DeserializeFiltering.IsChecked,
-                    DeserializeSorting = (bool)this.DeserializeSorting.IsChecked,
-                    DeserializeGrouping = (bool)this.DeserializeGrouping.IsChecked,
-                    DeserializeGroupSummaries = (bool)this.DeserializeGroupSummaries.IsChecked,
-                    DeserializeTableSummaries = (bool)this.DeserializeTableSummaries.IsChecked,
-                    DeserializeStackedHeaders = (bool)this.DeserializeStackedHeaders.IsChecked
-                };
-                this.sfDataGrid.Deserialize(storageFile, options);
+                    StorageFile storageFile = await StorageFile.GetFileFromPathAsync(filePath);
+
+                    var options = new DeserializationOptions()
+                    {
+                        DeserializeColumns = (bool)this.DeserializeColumns.IsChecked,
+                        DeserializeFiltering = (bool)this.DeserializeFiltering.IsChecked,
+                        DeserializeSorting = (bool)this.DeserializeSorting.IsChecked,
+                        DeserializeGrouping = (bool)this.DeserializeGrouping.IsChecked,
+                        DeserializeGroupSummaries = (bool)this.DeserializeGroupSummaries.IsChecked,
+                        DeserializeTableSummaries = (bool)this.DeserializeTableSummaries.IsChecked,
+                        DeserializeStackedHeaders = (bool)this.DeserializeStackedHeaders.IsChecked
+                    };
+                    this.sfDataGrid.Deserialize(storageFile, options);
+                }
             }
             catch (Exception)
             {
@@ -292,10 +298,18 @@
 
         private async void OnSerializeDataGrid(object sender, Microsoft.UI.Xaml.RoutedEventArgs e)
         {
-            var folder = ApplicationData.Current.LocalFolder;
             try
             {
-                var storageFile = await folder.CreateFileAsync("DataGrid.xml", CreationCollisionOption.ReplaceExisting);
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SampleBrowser");
+                Directory.CreateDirectory(folderPath);
+                string filePath = Path.Combine(folderPath, "DataGrid.xml");
+                if (!File.Exists(filePath))
+                    File.Create(filePath).Dispose();
+
+                StorageFolder folder = await StorageFolder.GetFolderFromPathAsync(folderPath);
+   
+                StorageFile storageFile = await folder.CreateFileAsync("DataGrid.xml", CreationCollisionOption.ReplaceExisting);
+
                 var options = new SerializationOptions()
                 {
                     SerializeColumns = (bool)this.SerializeColumns.IsChecked,

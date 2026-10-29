@@ -1,7 +1,7 @@
 {
   "profiles": {
     "Syncfusion.AvatarViewDemos.WinUI": {
-      "commandName": "MsixPackage"
+      "commandName": "Project"
     }
   }
 }

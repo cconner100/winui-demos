@@ -21,7 +21,7 @@ namespace Syncfusion.MarkdownViewerDemos.WinUI
                 Category = "MarkdownViewer",
                 Description = "This sample demonstrates the basic features of the MarkdownViewer control, showcasing common markdown elements such as headings, paragraphs, links, lists, and code blocks.",
                 DemoView = typeof(Views.Overview),
-                DemoType = DemoTypes.New | DemoTypes.None,
+                DemoType = DemoTypes.None,
                 ShowInfoPanel = false,
             };
 
@@ -31,7 +31,7 @@ namespace Syncfusion.MarkdownViewerDemos.WinUI
                 Category = "MarkdownViewer",
                 Description = "This sample demonstrates how to customize the appearance of the MarkdownViewer control. It showcases styling options such as font customization, color themes, and layout adjustments to match the application's visual design.",
                 DemoView = typeof(Views.Customization),
-                DemoType = DemoTypes.New | DemoTypes.None,
+                DemoType = DemoTypes.None,
                 ShowInfoPanel = false,
             };
 
@@ -39,7 +39,7 @@ namespace Syncfusion.MarkdownViewerDemos.WinUI
             {
                 Control = DemoControl.MarkdownViewer,
                 ControlCategory = ControlCategory.Miscellaneous,
-                ControlBadge = ControlBadge.New,
+                ControlBadge = ControlBadge.None,
                 Description = "The Syncfusion® WinUI MarkdownViewer control is used to render and preview Markdown files. It converts markdown syntax into a clean, readable format and supports elements such as headings, lists, code blocks, tables, and other common markdown structures.",
                 Glyph = "\uE72a",
                 ImageSource = "MarkdownViewer.png"

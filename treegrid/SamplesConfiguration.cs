@@ -78,7 +78,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             {
                 Name = "Sorting",
                 Category = "Sorting",
-                DemoType = DemoTypes.None,
+                DemoType = DemoTypes.Updated,
                 Description = "The TreeGrid control allows you to sort data against one or more columns. Additional sorting functionalities include tristate sorting and displaying sort numbers to indicate the sort order.",
                 DemoView = typeof(TreeGrid.Sorting),
                 ShowInfoPanel = true
@@ -346,7 +346,7 @@ namespace Syncfusion.TreeGridDemos.WinUI
             {
                 Control = DemoControl.SfTreeGrid,
                 ControlCategory = ControlCategory.Grids,
-                ControlBadge = ControlBadge.None,
+                ControlBadge = ControlBadge.Updated,
                 Description = "The TreeGrid control displays the hierarchical or self-relational data in a tree structure with multicolumn interface like multicolumn treeview.",
                 Glyph = "\uE702",
                 ImageSource = "TreeGrid.png"

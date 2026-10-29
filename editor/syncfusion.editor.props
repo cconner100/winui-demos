@@ -1,5 +1,4 @@
 <Project>
-	<Import Project="..\datetime\syncfusion.datetime.props" />
 <ItemGroup>
     <Compile Include="..\Editor\Converters\StringToPathConverter.cs">
 		<Link>Editor\Converters\StringToPathConverter.cs</Link>

@@ -1,12 +1,7 @@
 ﻿using Microsoft.UI;
 using Microsoft.UI.Xaml;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
-using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 
@@ -17,7 +12,7 @@ namespace Syncfusion.DemosCommon.WinUI
     /// </summary>
     public static class ThemeHelper
     {
-        private const string SelectedAppThemeKey = "SelectedAppTheme";
+        private static string _savedTheme;
 
         /// <summary>
         /// Reference to the current application window, needed for theme application.
@@ -45,7 +40,7 @@ namespace Syncfusion.DemosCommon.WinUI
                     rootElement.RequestedTheme = value;
                 }
 
-                ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey] = value.ToString();
+                SaveThemeSetting(value.ToString());
                 UpdateSystemCaptionButtonColors();
             }
         }
@@ -73,15 +68,16 @@ namespace Syncfusion.DemosCommon.WinUI
         /// </summary>
         public static void Initialize()
         {
-            string savedTheme = ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey]?.ToString();
+            string savedTheme = LoadThemeSetting();
 
             if (savedTheme != null)
             {
-                Enum.TryParse(typeof(ElementTheme), savedTheme, out object theme);
-                RootTheme = (ElementTheme)theme;
+                if (Enum.TryParse(typeof(ElementTheme), savedTheme, out object theme))
+                {
+                    RootTheme = (ElementTheme)theme;
+                }
             }
-        } 
-        
+        }
 
         /// <summary>
         /// Updates the color of the system caption button (e.g., minimize, maximize, close buttons)
@@ -95,6 +91,24 @@ namespace Syncfusion.DemosCommon.WinUI
         /// </remarks>
         public static void UpdateSystemCaptionButtonColors()
         {
+        }
+
+        /// <summary>
+        /// Saves the theme setting to in-memory storage.
+        /// Theme resets to ElementTheme.Default on app restart.
+        /// </summary>
+        private static void SaveThemeSetting(string theme)
+        {
+            _savedTheme = theme;
+        }
+
+        /// <summary>
+        /// Loads the theme setting from in-memory storage.
+        /// Theme resets to ElementTheme.Default on app restart.
+        /// </summary>
+        private static string LoadThemeSetting()
+        {
+            return _savedTheme;
         }
     }
 }

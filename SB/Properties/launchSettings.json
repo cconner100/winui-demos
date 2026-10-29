@@ -1,7 +1,7 @@
 {
   "profiles": {
     "SampleBrowser.WinUI": {
-      "commandName": "MsixPackage"
+      "commandName": "Project"
     }
   }
 }

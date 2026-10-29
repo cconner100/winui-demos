@@ -53,6 +53,12 @@ namespace TreeGrid
 
             if (this.cmbSortClickAction != null)
                 this.cmbSortClickAction = null;
+
+            if (this.cmbInitialSortDirection != null)
+                this.cmbInitialSortDirection = null;
+
+            if (this.cmbFirstName != null)
+                this.cmbFirstName = null;
         }
     }
 }

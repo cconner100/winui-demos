@@ -16,5 +16,6 @@
     <PublishProfile>Properties\PublishProfiles\win10-$(Platform).pubxml</PublishProfile>
     <UseRidGraph>true</UseRidGraph>
     <DefineConstants>$(DefineConstants);TRACE;</DefineConstants>
+    <WindowsPackageType>None</WindowsPackageType>
   </PropertyGroup>
 </Project>

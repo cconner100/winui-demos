@@ -231,6 +231,21 @@ namespace Syncfusion.SchedulerDemos.WinUI
                 ShowInfoPanel = false,
             };
 
+            DemoInfo icsExportImport = new DemoInfo()
+            {
+                Name = "Export and Import ICS",
+                Category = "ICSExportImport",
+                DemoType = DemoTypes.New,
+                Description = "This sample showcases the ability to export scheduler appointments to an iCalendar (.ics) file and import external ICS events into the scheduler.",
+                DemoView = typeof(ICSExportImport),
+                ShowInfoPanel = false
+            };
+
+            List<Documentation> icsExportImportDocumentations = new List<Documentation>();
+            icsExportImportDocumentations.Add(new Documentation() { Content = "Scheduler - API Reference Documentation", Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Scheduler.html") });
+            icsExportImportDocumentations.Add(new Documentation() { Content = "Scheduler - ICS Export Import Documentation", Uri = new Uri("https://help.syncfusion.com/scheduler-sdk/winui/schedule/appointments") });
+            icsExportImport.Documentation.AddRange(icsExportImportDocumentations);
+
             DemoInfo smartScheduler = new DemoInfo()
             {
                 Name = "Smart Scheduler",
@@ -257,13 +272,14 @@ namespace Syncfusion.SchedulerDemos.WinUI
                 specialTimeRegionCustomization,
                 fareCalendar,
                 timeslotCustomization,
+                icsExportImport,
                 smartScheduler,
             };
 
             var controlInfo = new ControlInfo()
             {
                 Control = DemoControl.SfScheduler,
-                ControlBadge = ControlBadge.None,
+                ControlBadge = ControlBadge.Updated,
                 ControlCategory = ControlCategory.Calendars,
                 Description = "The Scheduler control is used to schedule and manage appointments through an intuitive user interface, similar to the Windows calendar",
                 Glyph = "\uE71a",

@@ -17,7 +17,7 @@
 
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Auto">
-            <common:DemoLayout HeaderText="This sample showcases the capabilities to navigate to specific dates in scheduler views, show or hide header view, time ruler label and 24 hours time ruler format in the scheduler..">
+            <common:DemoLayout HeaderText="This sample showcases the capabilities to navigate to specific dates in scheduler views, show or hide header view, time ruler label and 24 hours time ruler format in the scheduler.">
                 <common:DemoLayout.Example>
                     <Grid Height="440" VerticalAlignment="Center">
                         <Grid.Resources>

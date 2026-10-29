@@ -147,6 +147,10 @@
 		<Link>Scheduler\Views\TimeslotCustomization.xaml.cs</Link>
       <DependentUpon>..\Scheduler\Views\TimeslotCustomization.xaml</DependentUpon>
     </Compile>
+	 <Compile Include="..\Scheduler\Views\ICSExportImport.xaml.cs">
+		 <Link>Scheduler\Views\ICSExportImport.xaml.cs</Link>
+		 <DependentUpon>..\Scheduler\Views\ICSExportImport.xaml</DependentUpon>
+	 </Compile>
 	 <Compile Include="..\Scheduler\Views\SmartScheduler.xaml.cs">
 		 <Link>Scheduler\Views\SmartScheduler.xaml.cs</Link>
 		 <DependentUpon>..\Scheduler\Views\SmartScheduler.xaml</DependentUpon>
@@ -228,10 +232,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-	  <Page Include="..\Scheduler\Views\SmartScheduler.xaml">
-		  <Link>Scheduler\Views\SmartScheduler.xaml</Link>
-		  <SubType>Designer</SubType>
-		  <Generator>MSBuild:Compile</Generator>
-	  </Page>
+	<Page Include="..\Scheduler\Views\ICSExportImport.xaml">
+		<Link>Scheduler\Views\ICSExportImport.xaml</Link>
+		<SubType>Designer</SubType>
+		<Generator>MSBuild:Compile</Generator>
+	</Page>
+	<Page Include="..\Scheduler\Views\SmartScheduler.xaml">
+		<Link>Scheduler\Views\SmartScheduler.xaml</Link>
+		<SubType>Designer</SubType>
+		<Generator>MSBuild:Compile</Generator>
+	</Page>
   </ItemGroup>
 </Project>

@@ -45,18 +45,29 @@ namespace Syncfusion.ChatDemos.WinUI
                 ShowInfoPanel = false,
             };
 
+            DemoInfo chatConversationHistory = new DemoInfo()
+            {
+                Name = "Conversation History",
+                Category = "Chat",
+                Description = "This sample demonstrates the conversation history support in the AIAssistView component, which lets users browse and switch between past conversations from a side navigation pane.",
+                DemoView = typeof(Views.ConversationHistory),
+                DemoType = DemoTypes.AISamples | DemoTypes.New,
+                ShowInfoPanel = false,
+            };
+
             var chat = new ControlInfo()
             {
                 Control = DemoControl.SfAIAssistView,
                 ControlCategory = ControlCategory.Miscellaneous,
-                ControlBadge = ControlBadge.None,
+                ControlBadge = ControlBadge.Updated,
                 Description = "The Syncfusion® WinUI AIAssistView control offers an adaptable interface for integrating AI-driven assistance directly within your application, enhancing user experience and productivity.",
                 Glyph = "\uE728",
                 ImageSource = "aiassistview.png",
-            };     
+            };
             chat.Demos.Add(chatAIAssistView);
             chat.Demos.Add(composeView);
             chat.Demos.Add(chatAIIntegration);
+            chat.Demos.Add(chatConversationHistory);
             
 
             var controlInfo = new List<ControlInfo>()

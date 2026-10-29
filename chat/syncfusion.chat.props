@@ -12,6 +12,9 @@
 	 <Compile Include="..\Chat\ViewModel\ComposeViewModel.cs">
 		 <Link>Chat\ViewModel\ComposeViewModel.cs</Link>
 	 </Compile>
+	 <Compile Include="..\Chat\ViewModel\ConversationHistoryViewModel.cs">
+		 <Link>Chat\ViewModel\ConversationHistoryViewModel.cs</Link>
+	 </Compile>
 	 <Compile Include="..\Chat\Views\Overview.xaml.cs">
 		 <Link>Chat\Views\Overview.xaml.cs</Link>
 		 <DependentUpon>..\Chat\Views\Overview.xaml</DependentUpon>
@@ -19,14 +22,18 @@
 	 <Compile Include="..\Chat\Views\AssistView.xaml.cs">
 		 <Link>Chat\Views\AssistView.xaml.cs</Link>
 		 <DependentUpon>..\Chat\Views\AssistView.xaml</DependentUpon>
-	 </Compile>	 
+	 </Compile>
 	 <Compile Include="..\Chat\Views\ComposeView.xaml.cs">
 		 <Link>Chat\Views\ComposeView.xaml.cs</Link>
 		 <DependentUpon>..\Chat\Views\ComposeView.xaml</DependentUpon>
 	 </Compile>
+	 <Compile Include="..\Chat\Views\ConversationHistory.xaml.cs">
+		 <Link>Chat\Views\ConversationHistory.xaml.cs</Link>
+		 <DependentUpon>..\Chat\Views\ConversationHistory.xaml</DependentUpon>
+	 </Compile>
   </ItemGroup>
 
-  <ItemGroup>	
+  <ItemGroup>
 	  <Page Include="..\Chat\Views\Overview.xaml">
 		  <Link>Chat\Views\Overview.xaml</Link>
 		  <SubType>Designer</SubType>
@@ -42,6 +49,11 @@
 		  <SubType>Designer</SubType>
 		  <Generator>MSBuild:Compile</Generator>
 	  </Page>
+	  <Page Include="..\Chat\Views\ConversationHistory.xaml">
+		  <Link>Chat\Views\ConversationHistory.xaml</Link>
+		  <SubType>Designer</SubType>
+		  <Generator>MSBuild:Compile</Generator>
+	  </Page>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +66,9 @@
 	</Content>
 	  <Content Include="..\Chat\Assets\Chat\aiassistview_xaml.txt">
 		  <Link>Chat\Assets\Chat\aiassistview_xaml.txt</Link>
+	  </Content>
+	  <Content Include="..\Chat\Assets\Chat\conversationhistory_xaml.txt">
+		  <Link>Chat\Assets\Chat\conversationhistory_xaml.txt</Link>
 	  </Content>
 	  <Content Include="..\Chat\Assets\Chat\composeview_xaml.txt">
 		  <Link>Chat\Assets\Chat\composeview_xaml.txt</Link>

@@ -46,8 +46,10 @@ namespace DataGrid
             }
             else
             {
-                StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-                stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SampleBrowser");
+                Directory.CreateDirectory(folderPath);
+                StorageFolder folder = await StorageFolder.GetFolderFromPathAsync(folderPath);
+                stFile = await folder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
             }
             try
             {

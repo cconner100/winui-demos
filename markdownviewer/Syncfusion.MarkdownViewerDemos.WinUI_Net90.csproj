@@ -21,7 +21,7 @@
     <ProjectReference Include="../common/Syncfusion.DemosCommon.WinUI_lib_Net90.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.MarkdownViewer.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.MarkdownViewer.WinUI" Version="35.1.37" />
   </ItemGroup>
   <Import Project="..\targets\MultiTargeting_Net90.targets" />
 </Project>

@@ -6,7 +6,7 @@
     <AssemblyName>Syncfusion.SampleBrowser.WinUI</AssemblyName>
     <RootNamespace>Syncfusion.SampleBrowser.WinUI</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <DefineConstants>Main_SB;UISuiteSDK;COMPLETE;</DefineConstants>
+    <DefineConstants>Main_SB;UISuiteSDK;</DefineConstants>
     <AppxPackageDir>AppxPackages\$(TargetFramework)</AppxPackageDir>
     <AssemblyTitle>SampleBrowser.WinUI</AssemblyTitle>
   </PropertyGroup>

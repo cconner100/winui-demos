@@ -15,8 +15,6 @@ namespace Syncfusion.EditorDemos.WinUI
         /// </summary>
         public SamplesConfiguration()
         {
-            new DateTimeDemos.WinUI.SamplesConfiguration();
-            
             DemoInfo colorPickerDemo = new DemoInfo()
             {
                 Name = "Getting Started",

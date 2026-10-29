@@ -13,7 +13,7 @@
     <None Remove="syncfusion.shadowdemos.winui_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Editors.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Editors.WinUI" Version="35.1.37" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>

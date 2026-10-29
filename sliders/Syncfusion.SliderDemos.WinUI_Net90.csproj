@@ -13,7 +13,7 @@
     <None Remove="syncfusion.sliderdemos.winui_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Sliders.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Sliders.WinUI" Version="35.1.37" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>

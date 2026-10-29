@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using Windows.Storage;
@@ -14,9 +15,10 @@ namespace Syncfusion.DemosCommon.WinUI
         /// <returns></returns>
         public static async Task<string> LoadText(string relativeFilePath)
         {
-            Uri sourceUri = new Uri(relativeFilePath);
-            var file = await StorageFile.GetFileFromApplicationUriAsync(sourceUri);
-            return await FileIO.ReadTextAsync(file);
+            string fullPath = Path.Combine(
+                    AppContext.BaseDirectory,
+                    relativeFilePath.Replace("ms-appx:///", string.Empty).Replace('/', Path.DirectorySeparatorChar));
+            return await File.ReadAllTextAsync(fullPath);
         }
 
         /// <summary>

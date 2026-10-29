@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\syncfusion.common.desktop.props" />
-  <Import Project="..\datetime\syncfusion.datetime.props" />
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <AssemblyName>Syncfusion.EditorDemos.WinUI</AssemblyName>
@@ -46,7 +45,7 @@
     <Compile Remove="Views\ComboBox\Resources\CityFilteringBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="35.1.37" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>

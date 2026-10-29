@@ -33,6 +33,7 @@ namespace Syncfusion.DataGridDemos.WinUI
         /// </summary>
         public App()
         {
+            Syncfusion.Telemetry.Telemetry.Disable();
             this.InitializeComponent();
         }
 

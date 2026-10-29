@@ -353,7 +353,13 @@ namespace Syncfusion.DemosCommon.WinUI
         /// Represents the SfAIAssistView control for AI-assisted input.
         /// </summary>
         [Display(Name = "AIAssistView")]
-        SfAIAssistView
+        SfAIAssistView,
+
+        /// <summary>
+        /// Represents the SfDockingManager control for docking child elements.
+        /// </summary>
+        [Display(Name = "DockingManager")]
+        SfDockingManager
        
     }
 

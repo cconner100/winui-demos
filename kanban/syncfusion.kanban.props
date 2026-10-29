@@ -136,6 +136,9 @@
     <Compile Include ="..\Kanban\ViewModel\GettingStartedViewModel.cs">
       <Link>Kanban\ViewModel\GettingStartedViewModel.cs</Link>
     </Compile>
+	<Compile Include="..\Kanban\ViewModel\SelectionViewModel.cs">
+	  <Link>Kanban\ViewModel\SelectionViewModel.cs</Link>
+	</Compile>
     <Compile Include ="..\Kanban\Views\Customization.xaml.cs">
       <Link>Kanban\Views\Customization.xaml.cs</Link>
       <DependentUpon>..\Kanban\Views\Customization.xaml</DependentUpon>
@@ -159,6 +162,10 @@
 	<Compile Include ="..\Kanban\Views\ColumnRearrangement.xaml.cs">
 	  <Link>Kanban\Views\ColumnRearrangement.xaml.cs</Link>
 	<DependentUpon>..\Kanban\Views\ColumnRearrangement.xaml</DependentUpon>
+	</Compile>
+	<Compile Include ="..\Kanban\Views\Selection.xaml.cs">
+	  <Link>Kanban\Views\Selection.xaml.cs</Link>
+	  <DependentUpon>..\Kanban\Views\Selection.xaml</DependentUpon>
 	</Compile>
     <Compile Include="..\Kanban\SamplesConfiguration.cs">
       <Link>Kanban\SamplesConfiguration.cs</Link>
@@ -206,4 +213,11 @@
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>
   </ItemGroup>
+	<ItemGroup>
+		<Page Include="..\Kanban\Views\Selection.xaml">
+			<Link>Kanban\Views\Selection.xaml</Link>
+			<SubType>Designer</SubType>
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
 </Project>

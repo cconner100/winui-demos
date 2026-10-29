@@ -11,7 +11,7 @@
     <None Remove="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Gauge.WinUI" Version="35.1.37" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>

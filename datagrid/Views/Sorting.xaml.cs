@@ -46,6 +46,12 @@ namespace DataGrid
 
             if (this.cmbSortClickAction != null)
                 this.cmbSortClickAction = null;
+
+            if (this.cmbInitialSortDirection != null)
+                this.cmbInitialSortDirection = null;
+
+            if (this.cmbEmployeeID != null)
+                this.cmbEmployeeID = null;
         }
     }
 }

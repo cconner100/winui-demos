@@ -60,7 +60,7 @@
             {
                 Name = "Column Rearrangement",
                 Category = "Kanban",
-                DemoType = DemoTypes.New,
+                DemoType = DemoTypes.None,
                 Description = "This example demonstrates column rearrangement in the Kanban control. You can drag the columns and drop them in any stage on the Kanban board.",
                 DemoView = typeof(ColumnRearrangement),
                 ShowInfoPanel = true
@@ -72,11 +72,36 @@
 
             columnRearrangement.Documentation.AddRange(columnRearrangementDocumentation);
 
+            DemoInfo selection = new DemoInfo()
+            {
+                Name = "Selection",
+                Category = "Kanban",
+                DemoType = DemoTypes.New,
+                Description = "This example demonstrates card selection in the Kanban control. You can select either a single card or multiple cards on the Kanban board to perform various operations.",
+                DemoView = typeof(Selection),
+                ShowInfoPanel = true
+            };
+
+            List<Documentation> selectionDocumentation = new List<Documentation>();
+            selectionDocumentation.Add(new Documentation()
+            {
+                Content = "Kanban - API Reference Documentation",
+                Uri = new Uri("https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.Kanban.html")
+            });
+            selectionDocumentation.Add(new Documentation()
+            {
+                Content = "Kanban - Documentation",
+                Uri = new Uri("https://help.syncfusion.com/gantt-sdk/winui/kanban/cards#card-selection")
+            });
+
+            selection.Documentation.AddRange(selectionDocumentation);
+
             var demos = new List<DemoInfo>()
             {
                 gettingStarted,
                 swimlane,
                 dialogEditing,
+                selection,
                 columnRearrangement,
             };
 

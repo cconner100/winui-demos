@@ -10,6 +10,7 @@
     xmlns:local="using:TreeGrid"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:treeGrid="using:Syncfusion.UI.Xaml.TreeGrid"
+    xmlns:data="using:Syncfusion.UI.Xaml.Data"
     Background="Transparent"
     mc:Ignorable="d">
     <Page.Resources>
@@ -22,7 +23,7 @@
                     <common:DemoLayout.Example>
                         <treeGrid:SfTreeGrid
                         x:Name="sfTreeGrid"
-                        Height="450"
+                        Height="510"
                         Width="Auto"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
@@ -37,9 +38,13 @@
                         ParentPropertyName="ID"
                         SelfRelationRootValue="-1"
                         ShowSortNumbers="{Binding IsChecked, ElementName=ckbShowSortNumbers}"
-                        SortClickAction="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True, Type=grid:SortClickAction}, ElementName=cmbSortClickAction}">
+                        SortClickAction="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True, Type=grid:SortClickAction}, ElementName=cmbSortClickAction}"
+                        InitialSortDirection="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True, Type=data:SortDirection}, ElementName=cmbInitialSortDirection}">
                             <treeGrid:SfTreeGrid.Columns>
-                                <treeGrid:TreeGridTextColumn HeaderText="First Name" MappingName="FirstName" />
+                                <treeGrid:TreeGridTextColumn 
+                                HeaderText="First Name"
+                                MappingName="FirstName" 
+                                InitialSortDirection="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True, Type=data:SortDirection}, ElementName=cmbFirstName}" />
                                 <treeGrid:TreeGridTextColumn HeaderText="Last Name" MappingName="LastName" />
                                 <treeGrid:TreeGridNumericColumn
                                 HeaderText="Employee ID"
@@ -94,23 +99,36 @@
                             SelectedIndex="0">
                             </ComboBox>
 
+                            <ComboBox
+                            x:Name="cmbInitialSortDirection"
+                            Margin="16,5,5,5"
+                            Header="InitialSortDirection"
+                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=data:SortDirection}"
+                            SelectedIndex="0"/>
+
                             <TextBlock
                             Margin="16,5,5,5"
-                            FontSize="12"
                             FontWeight="Bold"
-                            Text="AllowSorting for &#10;Columns" />
+                            Text="AllowSorting for Columns" />
 
                             <CheckBox
                             x:Name="ckbSalary"
                             Margin="16,5,5,5"
-                            Content="AllowSorting for Salary &#10;Column"
+                            Content="AllowSorting for Salary Column"
                             IsChecked="True" />
 
                             <CheckBox
                             x:Name="ckbTitle"
                             Margin="16,5,5,5"
-                            Content="AllowSorting for Title &#10;Column"
+                            Content="AllowSorting for Title Column"
                             IsChecked="True" />
+
+                            <ComboBox
+                            x:Name="cmbFirstName"
+                            Margin="16,5,5,5"
+                            Header="InitialSortDirection for First Name Column"
+                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=data:SortDirection}"
+                            SelectedIndex="0"/>
 
                         </StackPanel>
                     </common:DemoLayout.Options>
@@ -131,7 +149,8 @@
                               ParentPropertyName=&quot;ID&quot;
                               SelfRelationRootValue=&quot;-1&quot;
                               ShowSortNumbers=&quot;$(ShowSortNumbers)&quot;
-                              SortClickAction=&quot;$(SortClickAction)&quot;&gt; 
+                              SortClickAction=&quot;$(SortClickAction)&quot;
+                              InitialSortDirection=&quot;$(InitialSortDirection)&quot;&gt;
         &lt;treeGrid:SfTreeGrid.SortColumnDescriptions&gt;
             &lt;grid:SortColumnDescription ColumnName="ID" /&gt;
         &lt;/treeGrid:SfTreeGrid.SortColumnDescriptions&gt;
@@ -151,6 +170,9 @@
                         <common:DemoLayoutSubstitution
                         Key="SortClickAction"
                         SubstitutionValue="{x:Bind sfTreeGrid.SortClickAction, Mode=OneWay}" />
+                        <common:DemoLayoutSubstitution
+                        Key="InitialSortDirection"
+                        SubstitutionValue="{x:Bind sfTreeGrid.InitialSortDirection, Mode=OneWay}" />
                     </common:DemoLayout.Substitutions>
                 </common:DemoLayout>
             </StackPanel>

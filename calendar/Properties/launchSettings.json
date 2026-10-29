@@ -1,7 +1,7 @@
 {
   "profiles": {
     "Syncfusion.CalendarDemos.WinUI": {
-      "commandName": "MsixPackage"
+      "commandName": "Project"
     }
   }
 }

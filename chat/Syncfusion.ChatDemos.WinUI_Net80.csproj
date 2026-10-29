@@ -21,7 +21,7 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="CommunityToolkit.WinUI.UI.Controls.Markdown" Version="7.1.2" />
-    <PackageReference Include="Syncfusion.Chat.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Chat.WinUI" Version="35.1.37" />
   </ItemGroup>
   <Import Project="..\targets\MultiTargeting_Net80.targets" />
 </Project>

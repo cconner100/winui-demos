@@ -80,7 +80,7 @@ namespace Syncfusion.DataGridDemos.WinUI
             {
                 Name = "Sorting",
                 Category = "Data Presentation",
-                DemoType = DemoTypes.None,
+                DemoType = DemoTypes.Updated,
                 Description = "The DataGrid control allows you to sort data against one or more columns. Additional sorting functionalities include tristate sorting and displaying sort numbers to indicate the sort order.",
                 DemoView = typeof(DataGrid.Sorting),
                 ShowInfoPanel = true
@@ -565,7 +565,7 @@ namespace Syncfusion.DataGridDemos.WinUI
             {
                 Control = DemoControl.SfDataGrid,
                 ControlCategory = ControlCategory.Grids,
-                ControlBadge = ControlBadge.None,
+                ControlBadge = ControlBadge.Updated,
                 Description = "The DataGrid is a high performance grid control that displays tabular and hierarchical data. It supports sorting, grouping, filtering, etc.",
                 Glyph = "\uE707",
                 ImageSource = "DataGrid.png"

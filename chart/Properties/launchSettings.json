@@ -1,7 +1,7 @@
 {
   "profiles": {
     "Syncfusion.ChartDemos.WinUI": {
-      "commandName": "MsixPackage"
+      "commandName": "Project"
     }
   }
 }

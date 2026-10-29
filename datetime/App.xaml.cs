@@ -33,6 +33,7 @@ namespace Syncfusion.DateTimeDemos.WinUI
         /// </summary>
         public App()
         {
+            Syncfusion.Telemetry.Telemetry.Disable();
             this.InitializeComponent();
         }
 

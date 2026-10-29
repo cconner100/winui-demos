@@ -24,6 +24,7 @@ namespace Syncfusion.SliderDemos.WinUI
         /// </summary>
         public App()
         {
+            Syncfusion.Telemetry.Telemetry.Disable();
             this.InitializeComponent();
         }
 

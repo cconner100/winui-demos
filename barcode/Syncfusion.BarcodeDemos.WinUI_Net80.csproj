@@ -16,7 +16,7 @@
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Barcode.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Barcode.WinUI" Version="35.1.37" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="../common/Syncfusion.DemosCommon.WinUI_lib_Net80.csproj" />

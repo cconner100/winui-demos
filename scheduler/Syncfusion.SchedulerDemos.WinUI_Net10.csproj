@@ -14,10 +14,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Syncfusion.Editors.WinUI" Version="34.2.2" />
-    <PackageReference Include="Syncfusion.Calendar.WinUI" Version="34.2.2" />
-    <PackageReference Include="Syncfusion.Chat.WinUI" Version="34.2.2" />
-    <PackageReference Include="Syncfusion.Scheduler.WinUI" Version="34.2.2" />
+    <PackageReference Include="Syncfusion.Editors.WinUI" Version="35.1.37" />
+    <PackageReference Include="Syncfusion.Calendar.WinUI" Version="35.1.37" />
+    <PackageReference Include="Syncfusion.Chat.WinUI" Version="35.1.37" />
+    <PackageReference Include="Syncfusion.Scheduler.WinUI" Version="35.1.37" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
   <ItemGroup>

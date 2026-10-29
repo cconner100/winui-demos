@@ -40,6 +40,7 @@ namespace Syncfusion.SchedulerDemos.WinUI
         /// </summary>
         public App()
         {
+            Syncfusion.Telemetry.Telemetry.Disable();
             this.InitializeComponent();
         }
 

@@ -9,6 +9,7 @@
     xmlns:local="using:DataGrid"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:dataGrid="using:Syncfusion.UI.Xaml.DataGrid"
+    xmlns:data="using:Syncfusion.UI.Xaml.Data"
     xmlns:grid="using:Syncfusion.UI.Xaml.Grids"
     Background="Transparent"
     mc:Ignorable="d">
@@ -22,7 +23,7 @@
                     <common:DemoLayout.Example>
                         <dataGrid:SfDataGrid
                         x:Name="sfDataGrid"
-                        Height="520"
+                        Height="610"
                         Width="Auto"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
@@ -33,7 +34,8 @@
                         ItemsSource="{Binding Employees}"
                         NavigationMode="Row"
                         ShowSortNumbers="{Binding IsChecked, ElementName=ckbShowSortNumbers}"
-                        SortClickAction="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True,Type=grid:SortClickAction}, ElementName=cmbSortClickAction}">
+                        SortClickAction="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True,Type=grid:SortClickAction}, ElementName=cmbSortClickAction}"
+                        InitialSortDirection="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True,Type=data:SortDirection}, ElementName=cmbInitialSortDirection}">
 
                             <dataGrid:SfDataGrid.SortColumnDescriptions>
                                 <grid:SortColumnDescription ColumnName="Name" />
@@ -44,7 +46,8 @@
                                 AllowSorting="{Binding ElementName=ckbEmployeeID, Path=IsChecked}"
                                 TextAlignment="Right"
                                 HeaderText="Employee ID"
-                                MappingName="EmployeeID" />
+                                MappingName="EmployeeID"
+                                InitialSortDirection="{Binding SelectedValue, Converter={enumextension:StringToEnumValueConverter IsInversed=True,Type=data:SortDirection}, ElementName=cmbEmployeeID}" />
                                 <dataGrid:GridTextColumn
                                 AllowSorting="{Binding ElementName=ckbName, Path=IsChecked}"
                                 HeaderText="Employee Name"
@@ -88,8 +91,15 @@
                             Header="SortClickAction"
                             IsEnabled="{Binding IsChecked, ElementName=ckbAllowSort}"
                             ItemsSource="{enumextension:EnumToStringValuesExtension Type=grid:SortClickAction}"
-                            SelectedIndex="0">
-                            </ComboBox>
+                            SelectedIndex="0"/>
+
+                            <ComboBox
+                            x:Name="cmbInitialSortDirection"
+                            Margin="16,5,5,5"
+                            Header="InitialSortDirection"
+                            IsEnabled="{Binding IsChecked, ElementName=ckbAllowSort}"
+                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=data:SortDirection}"
+                            SelectedIndex="0"/>
 
                             <TextBlock
                             Margin="16,5,5,5"
@@ -110,6 +120,14 @@
                             DataContext="{Binding ElementName=sfGrid}"
                             IsChecked="{Binding Path=CanAllowSorting, Source={StaticResource employeeViewModel}}"/>
 
+                            <ComboBox
+                            x:Name="cmbEmployeeID"
+                            Margin="16,5,5,5"
+                            Header="InitialSortDirection for&#10;Employee ID Column"
+                            IsEnabled="{Binding IsChecked, ElementName=ckbEmployeeID}"
+                            ItemsSource="{enumextension:EnumToStringValuesExtension Type=data:SortDirection}"
+                            SelectedIndex="0"/>
+
                         </StackPanel>
                     </common:DemoLayout.Options>
                     <common:DemoLayout.Xaml>
@@ -125,7 +143,8 @@
                                  NavigationMode=&quot;Row&quot;
                                  ColumnWidthMode=&quot;AutoLastColumnFill&quot;
                                  ShowSortNumbers=&quot;$(ShowSortNumbers)&quot;
-                                 SortClickAction=&quot;$(SortClickAction)&quot;&gt;
+                                 SortClickAction=&quot;$(SortClickAction)&quot;
+                                 InitialSortDirection=&quot;$(InitialSortDirection)&quot;&gt;
           &lt;dataGrid:SfDataGrid.SortColumnDescriptions&gt;
              &lt;grid:SortColumnDescription ColumnName=&quot;Name&quot; /&gt;
           &lt;/dataGrid:SfDataGrid.SortColumnDescriptions&gt;
@@ -145,6 +164,9 @@
                         <common:DemoLayoutSubstitution
                         Key="SortClickAction"
                         SubstitutionValue="{x:Bind sfDataGrid.SortClickAction, Mode=OneWay}" />
+                        <common:DemoLayoutSubstitution
+                        Key="InitialSortDirection"
+                        SubstitutionValue="{x:Bind sfDataGrid.InitialSortDirection, Mode=OneWay}" />
                     </common:DemoLayout.Substitutions>
                 </common:DemoLayout>
             </StackPanel>
